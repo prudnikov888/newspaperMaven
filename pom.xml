@@ -27,10 +27,6 @@
         <module>services</module>
         <module>web</module>
     </modules>
-
-    <dependencyManagement>
-
-
         <dependencies>
             <dependency>
                 <groupId>cglib</groupId>
@@ -140,24 +136,6 @@
                 <version>${spring-security.version}</version>
             </dependency>
 
-
-            <!--Dependencies from this project modules-->
-            <dependency>
-                <groupId>newspaperSpring</groupId>
-                <artifactId>dao</artifactId>
-                <version>${newspaperSpring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>newspaperSpring</groupId>
-                <artifactId>services</artifactId>
-                <version>${newspaperSpring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>newspaperSpring</groupId>
-                <artifactId>web</artifactId>
-                <version>${newspaperSpring.version}</version>
-            </dependency>
-
             <!--Dependencies for logging-->
             <dependency>
                 <groupId>log4j</groupId>
@@ -233,5 +211,4 @@
                 <version>${aspectj.version}</version>
             </dependency>
         </dependencies>
-    </dependencyManagement>
 </project>

@@ -9,7 +9,7 @@
 <small>Введите свои email и пароль для доступа к системе</small>
 <br><br>
 
-<form action="/j_spring_security_check" method="post">
+<form action="/web/j_spring_security_check" method="post">
     <table>
         <tr>
             <td>Email:</td>

@@ -8,7 +8,7 @@
             <a align="right">&nbsp<a href="showNews.form?locale=RU">RU</a>/<a href="showNews.form?locale=EN">EN</a>&nbsp</a>
             <a align="right"><sec:authorize ifAnyGranted="admin">
                 Добрый день, вы зашли как администратор!
-                <a href="/j_spring_security_logout">Выйти из системы</a>
+                <a href="/web/j_spring_security_logout">Выйти из системы</a>
             </sec:authorize></a>
         </div>
     </header>
