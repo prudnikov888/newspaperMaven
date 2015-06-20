@@ -1,7 +1,0 @@
-package services;
-
-import org.springframework.stereotype.Service;
-import pojos.Permissions;
-@Service
-public class PermissionsService extends BaseService<Permissions> {
-}

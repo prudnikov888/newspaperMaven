@@ -1,9 +1,0 @@
-package db;
-
-import org.springframework.stereotype.Repository;
-import pojos.Category;
-
-@Repository
-public class CategoryDao extends BaseDao<Category> {
-
-}

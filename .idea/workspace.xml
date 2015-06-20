@@ -1,21 +1,366 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="035320b1-beb4-4d83-b425-0d73e57c3c43" name="Default" comment="">
+    <list default="true" id="d9012b68-4aa0-4c7c-9173-6e60088d7259" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.idea\artifacts\web_war_exploded2.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.idea\artifacts\web_war_exploded3.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.idea\dataSources.local.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.idea\dataSources.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.idea\libraries\Maven__org_slf4j_slf4j_api_1_6_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.idea\libraries\Spring_4_1_6_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.idea\libraries\Spring_MVC_4_1_6_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.idea\scopes\scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.idea\uiDesigner.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\entries" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\format" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\01\018f8f87f51e9a97cc29d4a651c78172656893b7.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\01\01d19fd22213516da532d8701d3e12010416fd9a.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\02\023778cef68704343091f2fbaad1bf257da6bb22.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\03\03d4bdc2513ead5c4bd912a2cb7636a023b7217e.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\04\04529924a4c72eedf29d874196f94b27a9d7529d.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\05\057cf9e10e45ad4e66f8d3bdbe838327de461822.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\06\06024147fcfd9440eee00f23a1bcf7fc76997b5e.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\06\066c871abbc7b0a7f6098cc5638ec65a3a714896.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\06\06c0db3abb270cbb084e3bc7424e290c9a05adf3.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\07\07f43612a376eb47abe74eba73225e84eba44d9b.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\08\086a4cc684d10323fcc1817c43fb54bcea7bbd26.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\09\091986b5a53708bc24294f84cd622f7c05b0c95b.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\09\0968c2a568c055fe57c93e5f8fb12c84d544a190.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\09\09e1ec5e665530ca9b133bfc1739bd229f58a2ab.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\0b\0b5e1e54fed1a87cbe5b29a18398a072eb5be2f0.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\0c\0c1787f98bd69f5ad50eee104e6252d5de2f687b.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\0d\0d1b3de9db01a5ba23940482700e1e2dc57d0420.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\0d\0d1dba0493c2cd48e773505ead62f75300f8fa6f.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\0f\0f0da8b1b6a104508cee45724d212c595e0bcbe0.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\0f\0f8a0b2e55691b128dbd8fab8c3e88f91a272888.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\10\105becb6c9207fa13cc73b33c04ccdbc055b3568.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\11\114a622a9e365f510c7acc4463ea3de1f55b505a.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\13\1328b3a84b59ce1ae41e9fb46cf8cd340f1b8dab.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\13\138f18352499e9084c7ca42a085940574e7f9e84.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\13\13c38f1bc6b5eefe8c3e5ff4cf225c62e772f5c9.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\15\15000e1b6e8e8a9e378a0c0296aace17fa3501cf.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\16\1649f5fec2f4bc7af3791557d28fe69c3bef7c38.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\16\16b811572b659999c05468b05f22ef14092169c7.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\17\170c50477292ee60ae09aa5c586d4af3a92d801a.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\17\17294f0a346fdf90dcccc4f45af0a12ef7bf84b0.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\17\174942eb0ff7b8c0051e8fc130e019358276f98a.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\18\188bd4ba117f54567298f6d19030d24837490096.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\1a\1a0e5acede4cee7bf43b23ee2f137c1a38483a4a.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\1a\1a6b37496dfce1746bf853d0d5044101d1f7e193.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\1b\1bca4358a06404168015b0ebb2730a39a9d8d8a7.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\1b\1bf19d1667f85ed3ad67a24181255e7382fa1ece.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\1c\1c2c9306a1a21a233ae891591b67b7575ce0d0ad.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\1d\1d175d6fe0a0c646557c0323651ee5dd82345eea.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\1d\1d4ae46823701480f7f39e1ee2b23180bcb41cc7.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\1d\1d66811a3223b7d83d13ed0eb4023c44fa5fef49.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\1e\1ed79d5d42029b532b64b07286cd95b9121f917a.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\1e\1ee062c3b8bb8f11e9803b6e66854333f8f4f622.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\22\225403fdf2b8ebb93ca09b553816dd474ca94f0c.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\23\23753dbb620f8fa992be47552bb7d989fe6abf50.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\24\249b9dc5e96b2faae41f906d7cfeebe137cd51fd.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\24\24f8ce2e17f47c430f788e18ffb909ea4a9dc139.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\25\252659a28ce8cc6c066585c48f6bc142285f6cb4.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\25\25b1092336079c51f533c91b0e775169453e7d4f.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\25\25e5725e63ef886c7022eec2bf333aaf8b19c81b.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\28\283f29c3a1de654d23f08969eca6c9f0283fdb39.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\2d\2d14685d3171f761785934fea9cc6d84ff0dabaf.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\2d\2d41ca4e942c2a61d6d09e91b7fee1405acf90f9.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\2d\2dcab6b60a77d50dc8e8391717da5cc9f9149b0b.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\2d\2dfc1215fd6936c50717ffcb3b1287bc9092ed30.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\2e\2e1f848db0a39b68ce7a37498e5853a6b5962047.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\2e\2e86f13d7b3a3277aebffb4488c87a1f541983bb.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\2e\2e8ccf73c811e0a185e603699c20191055b2c362.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\31\315d9f2a19bb06776eb051660dd6502ed9107629.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\31\31a3b8bb0f9daed0df2185ae3b8e9bead782b5f6.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\32\32a18cc1453754da74af9481392f88f221434027.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\33\3381af6adc1fa926e531cdf2a01e5a9774e517ba.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\34\342bb522e56dfd22907c6b3c7d6b638af9322130.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\34\345072648e1c9f2743cf70d6256d7309f2e7728a.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\35\3561bba2ae80c3ec16e173b105891afe1146dabd.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\36\3684a4734122b9c09c8807c05fdc9b2f088363a3.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\37\37810ad8ce0ed2c08a7e3ad3d2eca5841a5b7753.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\37\37baec7b524d5e5497a4cdf69f5e73f70f156fd1.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\37\37d201bb7b629c6fcab6d1b0771c4cf09224f897.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\38\38736b8bdeba106c19d83eab8f782a913e4bea32.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\3a\3a4b263a5f6d775c4022cc67eed82001dcabbd46.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\3a\3a90a36c6d87243f567e2101f2e063e8b3935169.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\3c\3c2fea78a57282034e9be275ad1b7bfc64596819.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\3c\3c57a54c3b70eadda5152c93eaffc7e73c2d098d.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\3d\3d6117c4f4666675bc38a2270a0fe02f7b2ba3de.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\3d\3da9ac6e3ac6d040059d9b159c326c4660daa75d.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\3d\3db40939aa6da6a4354acab42f8094f75c848122.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\3e\3e8370604cf508afec0c1b56d3db477535c928d3.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\3e\3ea5627798bb852817420b4f45d96fb908509a2b.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\3f\3f0927a8913c468e9a3bbbcd1b16c917273d6b2a.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\40\40bad7aed247f2e7e425af42f7244b849052ad81.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\41\410cddd5d3040106f028c41c9b79f867d7f45f4d.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\41\4125cc6626a7333f8e976b0f91c0f30724e3db02.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\41\412fe006a21a9c978367aa642da664ae0071d01d.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\42\4233ad6a31a184c03a46cd80573d82e545a8a134.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\44\44286ac1780759a72b0d4b3e2378d4081acd8f95.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\45\45b0444112e880b32595bf7993db2691876c7c46.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\47\478ce01a6d6a75a546d76a6f66e355e3cd60428a.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\48\48379dd7256ae3e7a5572e247251e263c95ab9bd.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\4a\4a83d33b98b9af9249ce35f25a629194c56ad560.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\4b\4b7261fd9d4c4ab58b2f77b0bf303757b38ddaa5.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\4b\4bac2b469c1ef8a46779738a4c55bbc72cc51c79.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\4c\4c8260a9bcf2936b607b0b60ec611c7cfa6b86f1.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\4d\4d3c289532ca18e7c59c41407e6fab154c3983dd.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\4d\4dba93eec5f34868110107004ba10110759a8db4.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\51\51d4efb63937ecde9d1c9da41b8221bddc6000e3.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\52\52a5f5198c9039f50f5e10a15900f88c0c8e9b4d.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\53\53734ccea6573263a6f61b59c920ae7ca7fa6058.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\53\53ec0af7b76e12d40664b5d42143bb20c0e915d3.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\54\54f4f77b4929262470e48c6723ed818dfe62b679.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\55\554f402cc6903a82a5f1cbc6c0962da937c625d1.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\56\56d008ef1ff7d03fbc3357567f9855cb65716e3d.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\57\57e29ccf956ac34cf71b162f0c420ef5d48356c8.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\58\58e07920831655127d2e7fd0311c61ac365c9ecd.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\59\59d21e022375186eeb3033efbec9e8e9aa24fe16.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\5a\5ae0b62a77e73ca5c553c9e7a16f34cbc462cdc9.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\5b\5b5ba834e68a90f97c12de7ef0dd4fb0fd201cf8.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\5c\5c8caa20bc67ec93f6078e3eccdbe387af98c199.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\5d\5d970f688b394d75b46bdb98d2282f571b5276e6.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\5e\5e34342fdf1e68e39274bed51f14fe456d43fe8c.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\5e\5e422ec7b303ec05cdc96bd56bc630a1852f0169.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\60\6027804753ef3b14f708c304c60cff5ad1be0b17.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\60\602d6663b240a2547856ea9b8a4966b1faec0cfc.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\60\60ad689813f06d80496a9b4ecbb7bcfd9b61a631.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\61\6118507e2a8d17157c1814516b2d416ee5b0f613.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\61\61963dc8193376e99ff5aab455da1c070494805c.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\62\6266eb28c007b9d67b7c44b9e2c7c999ff6ba3fc.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\63\63e4d44d51a6a4724c28cfdd0bf67eadccedbecd.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\65\656ee3932720fd0c6bef9a930346c16157367067.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\66\662f1f23dd86149294d95b013ca4afa38bb80698.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\68\68b0503faae73c136aa59f4d8dab77531d609adf.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\68\68b1c76201acac1aa9853fdc9f06582af56c7b13.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\69\6998fb3252ed955cae0901fc4c37a1bf16afa912.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\6a\6ac2660e4c29a1a81008b0ef52972010534e117d.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\6c\6caec6d97ee313420c97d640ad6d7bf28f3823fe.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\6c\6cc7f3fb765fcb8434d72b5db732b9c3d5c42286.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\6d\6d1d76cad8f678ceb224edf4fa2d7a08f7729107.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\6e\6e3168b52807c9830564808b44f5d12fb6404378.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\6f\6f997e295d1ef2f509428e5072af3b653c07ed13.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\70\701f09f9e0a4f0e2e8e45582150ab2bc18ea66e0.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\70\70fcf1b50a10d10bd540e560537eb94d88cbcc9b.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\71\7183d416175a4430c0db83e7da349648427b014b.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\72\72171c9de0c3b9c9aa972ba6834dacce593e60ce.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\72\72a40388b816048eeaa8447f1b39af466b9c96e6.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\73\7356851affeb57fc8a7e9b869a2079967c5e885f.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\74\7417c390493b378ae4866c958b73dfe4d9adb339.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\74\7483b271c7437cb001b58a29d938dbf767c1f1af.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\75\758a4adad4442984b1fbdfc0255402035213cc5e.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\76\76b1e37689c7fddbab7ae8062052ed74a57dc0c0.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\76\76e83f68e16beb6248fb87a3e5ec60a667dc2da0.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\77\77d6f94d34a232553a3abcac87eb2aca2a0d3d56.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\78\78c962eb07bf5212dde2d31c4d048e4052bf34de.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\78\78d6fad1f48c76a7b42ca4afca112b43db459fbf.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\7a\7a0ca9022800d8bd222f17bd6b01005af8604a4d.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\7b\7be87ce07c66eb731022ece06072e2fde29f66d3.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\7c\7c0abc95861ec7c575b1bb8c390f75176c17cfd4.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\7c\7c902bc4a4146cb97ac9e82560b3cd6bf97f9733.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\7c\7cb49a46a9fe5d7ecfcaac74d3a54b43920e56b5.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\7d\7d410e51a8d747da551b10639bae5be174561e52.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\7d\7d743c92bbe01f01119b2616a048c68afb07cc4c.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\7f\7f64dfad6bdbcefe4205891e64b81a02e7006858.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\7f\7f830dec08ff602a399e7ab02fcc2c100d3e6b3f.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\7f\7f8efad1ae462d63daf0ea4a22c56947964c10ea.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\7f\7f97b38bf44bef0e391172cbbed3bc10ba7e846c.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\7f\7fed9ef3ce5fc4c4b14ca6d87510c3e9ed81c596.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\81\8143045957e4ec89b443b10e47c6433016436a98.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\83\838ac2106539e0b32d37ff350e9a7d5478833207.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\84\848e13b0c590660f36c020f6c05f25173d2e5e2c.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\85\85edb9849af934d58c1fbea2e9c155cc14c89e12.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\86\86d210d665295742412cf5d6806f5ccaa05be777.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\87\87a21dcdd0b58bbe6f36a297ef834ca0deb857fd.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\8a\8a09bbc09135ffbfe11a374eab522fd4a805ffa7.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\8b\8b767f2555439da35fe85eb8d9b2b699f0cc69b8.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\8b\8ba463ac71337fb715397243933007e073601087.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\8b\8bd4405ffa5a736316d35a627b221ee672c6032a.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\8c\8c7a6b0ff53a6d33b330c778f7136aaa43d8ac2b.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\8c\8c9514a125e9ed61bdc658ee91f3a06961fbf91b.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\8c\8cf7d6c909ebc96f987d824e9a7e91a6ef13ea1b.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\8f\8ff882e10286ac91ae8d339c77933932d2c2e50e.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\90\909911ccc68e5c260994219c28fb8cf6b3adeb5e.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\90\90d8de691d75bfc5a06dd4e358f5c12beff422fe.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\92\927620caa02362e0eca98a2e723d2483ee94fb83.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\92\927b77a763d40cc2ea0537fd423eff9bfc83f546.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\92\92a8fa9764ea79dfa48391c288031c21303317ef.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\93\9366f7b61f93f1d38af1dbe57c7ce64941b7136d.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\93\93ff933b6644e572771e322b8c895efea91042e3.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\94\944e5747d99dc0e9d828f7d14ec9f739214191e4.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\94\9461680891cbd9b66f586f3a28ba3b1ea0edfba7.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\99\9945e8ea348f11fe8b520a4c2d43d172d9532fe8.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\99\99621f29ff2a8c3404df06449efbbb65a538cfc8.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\9a\9a903e91b8f3b9266a3b2dea23eda1194fdb6cf6.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\9a\9a9132a03c5e2a56a06ef5bd2f5fe8d3b1ce516d.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\9d\9d0fd0867d9c7e12799d17c3cc63dc11924b237c.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\9e\9e0543670da6baed4bc9d7466f7578854e2d78a9.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\9e\9e9d96d3ce3484053f12f387797c5919abea8cc0.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\9f\9f3903185e1e3785c86e042a2653e1ca9befe388.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\9f\9ff1ef562d8ef4b1ee383f2d6ecf35762aacd7e8.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\9f\9ff5177134f2ec41140c52271c8fbe2d3406635d.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\a1\a19284f63e2553faf2c0200914feec743ed9096e.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\a2\a23e36d1b56b0a166028ee17152d6a4eaa214f83.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\a3\a3020ae4646ae7e4b5b966e93e0c3a7bc29d1b7a.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\a5\a56f62799accd42fdb1311c1a2ef09d83be7806e.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\a6\a61632b951f426021cb9759cceb26cb27e389bc7.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\a6\a6236a8b23ecefb9908a2a5de4fa7057aeccb170.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\a6\a67558f897156d38bb1562cdfae8a6e497af8f94.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\a6\a69996b6a3d01008cf639309d9f9945b6373f621.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\a6\a6d35c8ffedd527914ae206c06323940977e0995.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\a6\a6ebb54c3fe6bde83fa0c08d82707782ebde8cb4.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\a9\a9a75a676a0b794f89937304281ebaf184b45579.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\ae\ae6fd9d477af75e54d200a46947273ea608405f3.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\af\afc08b2ed7309fd76f0ee8a9c1a64be1b259b829.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\b0\b0a72f1d27cb09766cf8881d58c4efba28e147aa.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\b0\b0bd843c9e0c3e87011813ea4b8d3385ac4223ee.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\b1\b12417e3b00a59ae551b16d041803763ebdc498a.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\b1\b171115c9eee410de6570721b4c5f4f253a6c44e.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\b2\b20ffce2030de0e0ef448e3b452b7cf5afa69d28.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\b2\b2c957b26f4d07dd764f029639543cf82b34b82f.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\b2\b2fa365e7c91d08c404e2a7b557caf04f6466b5e.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\b3\b301bdf498fb2fbe0316de7675022949a6c15a2f.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\b5\b581c527a356410339b87c4507f67e4bdfafa2f4.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\b5\b5c670c1056fdd16f43d904074bd3e66cfeeb019.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\b6\b6b4847503124912e64870ab577e0039d1001de3.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\b7\b7645dc313829b6377c5b7d4e98c3df75cc85972.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\b7\b7e6216616866929c3a7f73f75819300c0fa56e7.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\b9\b91b8bcf5a47e04f5b27899125dfe6bf101e81ad.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\ba\ba977ea20fd0af64ef8248d2c7d22361dc371298.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\ba\badcad90c019cb7189626953496fdedb0c532a41.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\bb\bb1bddc6a1f4d970da62d6378df080c07fcc0096.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\bc\bcd6d3a35882a6b6f8c59e263c0d8aef5705fa07.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\bd\bd24ef2630b1c6838d22c0575c025db9527d3719.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\bd\bd465b4c2d382460ce459bc7ab5897fb20ef6953.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\bd\bd6c07998e581771c3a438c59c046bdd83ebf7dc.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\bd\bdceab97423f967d856113f66d8df4066f9fc6f8.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\be\be509d098e206bf886165cbff797d3287d095592.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\bf\bf452ea0fbff7e5a28ae0014dc628276efe614fc.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\bf\bf5f981da4daeb6ff113bd1ca9acf5723b175488.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\c1\c137836f51b2d08fed7c7916734ef9bfc182e425.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\c1\c1dc74f7ba1ab726232c6cc022002dd70e85eddb.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\c2\c2580bc1e302143d8dfca4ce9d57a8fcbf12a3e6.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\c3\c39ff789c449d38420dc1683590884709af3e2bf.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\c3\c3bfca178d48dba3fd71ddd8261c43b6ce81cd0a.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\c4\c4d1433baaab13f7b0962b076efe900e9bf565cd.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\c5\c50b150ecdeb68a80ae34208b236801136025947.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\c5\c566a7216b8b336a1e31592c7997a9c821aea763.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\c5\c5a81e151bd4389566e28a6be7df9b89f8b8ca55.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\c5\c5c2e44bf20845ab1e2edd3d7f930e18698a0ac2.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\c6\c672383973d6b3d38895e40224061be0bcf07d0b.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\c7\c72590426194c8dea2be1dfd68df42cd59535e88.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\ca\ca626e3170a258f7167b940c1dc0a945d1f9df94.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\cb\cb350aedd457cc1e893de7bc61c32491c7bb917f.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\cb\cbb5555889dc21d2ccc9066dd5416b19341bf71f.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\cb\cbe0ef803fc8b3a4b6b5bbc6a5a533d547cf6007.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\cc\cc6c39a08debcc8b39f2efd9ba52ad5d68374939.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\cc\cc7a6f912ab140c1bda5dd5da2a5bd86ba95cde1.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\cc\cca588bb67b596bf7b4b5c53a6ab29adea30218e.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\cc\ccab6bf76a0ba52f6c1cf60b033ea9fb545f95b8.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\cf\cf2981e28d84f6ce173ced2faf660a44e1cfda64.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\cf\cf82ba5e9a3c9857b4749b49494b6e9b82513c39.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\d1\d1b02def50bca32c8dc9724d163ccdd402e34040.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\d2\d269c7b79665828722689d589dfc8013f09f57fe.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\d3\d30e03a1b20a0cc0773ca16aacaca01a52d81c70.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\d4\d41a8386eb521a1a899a2be93300585340639453.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\d4\d44959f3d07caccf3d434980a4296f80fb413ff8.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\d4\d457983201db0fe55ae84a101ee1938853e6569c.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\d4\d48d0c5d3e7abd68104ddfd1f9417c86e18cacc1.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\d4\d4c8195ec3e26dbe62d9aa05981bc18ba8e91b88.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\d5\d5283d8a4c7af156bbb613751696b03d40bc4339.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\d6\d690b155c28d41dadeba9ddd68b8fca3f4250e13.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\d8\d877f70431aa30216b7dee78d1ba42f396d79b4f.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\d9\d900b25898c343a1b752d4ab4f297b586cf9bd22.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\d9\d98dc05891b32bee932bc3b50550c1b14b080b01.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\d9\d9ee55194ff98b068e3ce7a62b3be0cc31f40cff.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\db\db9754ca9594631f9a78dc49a15cf2c746f0feb7.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\dd\ddd3a3892c0f7359bea7e356b4f5a38d0337a0c4.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\dd\ddde6bc765c95764d38d05a12d448631ec8ca893.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\de\deb5557fa16cd78b818c6fa98b0c3705488a8ca7.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\e1\e12c3acc213ece57a5da840a2a7dbb4d3b74ac88.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\e2\e227c6e74f21b158f538c7185dcb60efe593ab3c.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\e2\e29e803cf7ace4959d89cb4669c74b679e15dd6f.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\e3\e3f5b6141a583f49dc15a8e8eac19b184e1546fe.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\e4\e4500ac0247290471364f0ce1d17fdf2c8f3e9e1.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\e5\e547af0c81806f7f06edf8514bff616afc855274.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\e5\e598202f95ef4f9e2b3af6c50fac9e3d0400eb5a.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\e5\e5be02e5fbd1480cfbfdb62e9641415bbc5b748c.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\e5\e5f8647a659764950c7f900229335f48cf6c1611.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\e8\e86ff183d5c9068f3973c03daf1fcf72672b46e4.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\e9\e9613f2efca1bb50765bf6346a35770d0957618f.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\ea\ea1970eda4e07d7839c5ce27e38f904684d70beb.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\ea\ea735af6c2ab186bfd8a8e2ee15ccffe1f02fe23.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\ea\ea84f550206edacff34b8f6a6db587bdb986af22.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\ec\ec869cecb39f32dfc70a3a6c7b59d70580ce7c21.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\ec\ecfb8261b07bdc005735371753d26e9751e8c61e.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\ed\ed55cf58eb8e0802be761b4596db8d4f918a9497.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\ef\ef94be8a77c706b9ebf2e8f7253cdfc9eb98832c.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\f1\f1078a3bd8fd375bae25506778489e8f9ba0d0a5.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\f1\f1332341a64748e2c98cec4f690a6f5dbdda3268.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\f1\f1734cacf5cc5a1999317eef2255199de142773d.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\f2\f2b52fd638adf86e87024d03c102bffd2e77b5a0.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\f3\f392435db55f79df9e4142549b9bfc5b955786bd.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\f3\f3c1acf37f75baac3e4feea1df6866fa68aaf5bc.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\f3\f3fc5fc8efea5b067ea271f6c2410129ccabdefa.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\f4\f464bff9f3a2009b607b50c5e4ced482042641a2.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\f5\f502d88fd40b5a9ee3f4528086d923f0a76ab2ad.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\f5\f54b0b875e94d11bb79ef5e1fcb2cb320d8a9efb.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\f5\f5d243b3123357039cfd7691e7c21ee6253e90f1.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\f6\f6d7325801a2e031f44d717d890a14054b25114b.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\f8\f8125de03b5aa6e6dfa2160474bf8d2cd19f85a9.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\f8\f8b1315320bc9b69088f896ff478e4f2ec5b457d.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\fa\fa4255c43d5666f539f360b90dc85eaea43b53b4.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\fb\fb4099445da248e9e51830c4e921e07d232a8840.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\fd\fd051fb9a7d6b7f8055f420f16cf2dc70dc8889a.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\fe\fed920d6fe145030d6d68654c0df814bc6dce22a.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\ff\ff205a34ba53e12d0b4c78bf1d06903683dc8e35.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\ff\ff566f3d977d07288c7b8e843b04e67a0b488505.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\pristine\ff\fffe55d42cc84cde293134ba05cc5acc995ef23c.svn-base" afterPath="" />
+      <change type="DELETED" beforePath="D:\JavaProjects\newspaperSpring\.svn\wc.db" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/target/classes/db/BaseDao.class" afterPath="$PROJECT_DIR$/dao/target/classes/db/BaseDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/target/classes/services/BaseService.class" afterPath="$PROJECT_DIR$/services/target/classes/services/BaseService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/target/classes/pojos/Category.class" afterPath="$PROJECT_DIR$/dao/target/classes/pojos/Category.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/target/classes/db/CategoryDao.class" afterPath="$PROJECT_DIR$/dao/target/classes/db/CategoryDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/target/classes/services/CategoryService.class" afterPath="$PROJECT_DIR$/services/target/classes/services/CategoryService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/target/classes/db/Dao.class" afterPath="$PROJECT_DIR$/dao/target/classes/db/Dao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/target/classes/services/INewsService.class" afterPath="$PROJECT_DIR$/services/target/classes/services/INewsService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/target/classes/services/IService.class" afterPath="$PROJECT_DIR$/services/target/classes/services/IService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/classes/controllers/MainController.class" afterPath="$PROJECT_DIR$/web/target/classes/controllers/MainController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/controllers/MainController.class" afterPath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/controllers/MainController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/target/classes/pojos/News.class" afterPath="$PROJECT_DIR$/dao/target/classes/pojos/News.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/target/classes/db/NewsDao.class" afterPath="$PROJECT_DIR$/dao/target/classes/db/NewsDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/target/test-classes/NewsDaoTest.class" afterPath="$PROJECT_DIR$/dao/target/test-classes/NewsDaoTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/target/classes/services/NewsService.class" afterPath="$PROJECT_DIR$/services/target/classes/services/NewsService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/target/classes/pojos/Permissions.class" afterPath="$PROJECT_DIR$/dao/target/classes/pojos/Permissions.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/target/classes/db/PermissionsDao.class" afterPath="$PROJECT_DIR$/dao/target/classes/db/PermissionsDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/target/classes/services/PermissionsService.class" afterPath="$PROJECT_DIR$/services/target/classes/services/PermissionsService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/target/classes/pojos/Roles.class" afterPath="$PROJECT_DIR$/dao/target/classes/pojos/Roles.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/target/classes/db/RolesDao.class" afterPath="$PROJECT_DIR$/dao/target/classes/db/RolesDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/target/classes/services/RolesService.class" afterPath="$PROJECT_DIR$/services/target/classes/services/RolesService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/target/classes/pojos/Users.class" afterPath="$PROJECT_DIR$/dao/target/classes/pojos/Users.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/target/classes/db/UsersDao.class" afterPath="$PROJECT_DIR$/dao/target/classes/db/UsersDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/target/classes/services/UsersService.class" afterPath="$PROJECT_DIR$/services/target/classes/services/UsersService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/target/dao-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/dao/target/dao-1.0-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/web/WEB-INF/lib/dao-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/web/target/web/WEB-INF/lib/dao-1.0-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/target/services-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/services/target/services-1.0-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/web/WEB-INF/lib/services-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/web/target/web/WEB-INF/lib/services-1.0-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/web.war" afterPath="$PROJECT_DIR$/web/target/web.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/web/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/web/target/web/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/target/surefire-reports/NewsDaoTest.txt" afterPath="$PROJECT_DIR$/dao/target/surefire-reports/NewsDaoTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/target/surefire-reports/TEST-NewsDaoTest.xml" afterPath="$PROJECT_DIR$/dao/target/surefire-reports/TEST-NewsDaoTest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/dao.iml" afterPath="$PROJECT_DIR$/dao/dao.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/src/main/resources/ehcache.xsd" afterPath="$PROJECT_DIR$/dao/src/main/resources/ehcache.xsd" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/src/main/resources/entities-hib.xml" afterPath="$PROJECT_DIR$/dao/src/main/resources/entities-hib.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/target/classes/entities-hib.xml" afterPath="$PROJECT_DIR$/dao/target/classes/entities-hib.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/newspaperSpring.iml" afterPath="$PROJECT_DIR$/newspaperSpring.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/web/target/maven-archiver/pom.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/pom.xml" afterPath="$PROJECT_DIR$/dao/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/pom.xml" afterPath="$PROJECT_DIR$/services/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/pom.xml" afterPath="$PROJECT_DIR$/web/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/services.iml" afterPath="$PROJECT_DIR$/services/services.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/web.iml" afterPath="$PROJECT_DIR$/web/web.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/web_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/web_war_exploded.xml" />
@@ -23,12 +368,11 @@
     </list>
     <ignored path="newspaperSpring.iws" />
     <ignored path=".idea/workspace.xml" />
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <ignored path=".idea/dataSources.local.xml" />
-    <ignored path="$PROJECT_DIR$/dao/target/" />
-    <ignored path="$PROJECT_DIR$/web/target/" />
     <ignored path="$PROJECT_DIR$/services/target/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/web/target/" />
+    <ignored path="$PROJECT_DIR$/dao/target/" />
+    <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,151 +381,33 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
-  <component name="Commander">
-    <leftPanel />
-    <rightPanel />
-    <splitter proportion="0.5" />
-  </component>
-  <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/newspaperSpring$ManualTesting.coverage" NAME="ManualTesting Coverage Results" MODIFIED="1427715308164" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
-  </component>
-  <component name="DaemonCodeAnalyzer">
-    <disable_hints />
-  </component>
-  <component name="DatabaseView">
-    <option name="FLATTEN" value="false" />
-    <option name="GROUP_BY_TYPE" value="true" />
-    <option name="SORT_CHILDREN" value="false" />
-    <option name="SHOW_TABLE_CONSTRAINTS" value="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="newspaperSpring" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="dao.iml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dao/dao.iml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1240" max-vertical-offset="2080">
-              <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dao/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-              <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/services/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
-              <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.678426" vertical-offset="0" max-vertical-offset="740">
-              <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2523" max-vertical-offset="4400">
-              <caret line="138" column="0" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.iml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/web.iml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2300">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/jsp/addNews.jsp" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/jsp/editNews.jsp" />
-        <option value="$PROJECT_DIR$/services/src/main/java/services/NewsServiceTest.java" />
-        <option value="$PROJECT_DIR$/web/src/main/resources/i18n/messages_ru.properties" />
-        <option value="$PROJECT_DIR$/dao/src/main/java/pojos/Permissions.java" />
-        <option value="$PROJECT_DIR$/dao/src/main/java/pojos/Roles.java" />
-        <option value="$PROJECT_DIR$/dao/src/main/java/pojos/Users.java" />
-        <option value="$PROJECT_DIR$/services/src/main/resources/services.xml" />
-        <option value="$PROJECT_DIR$/dao/src/main/java/db/CategoryDao.java" />
-        <option value="$PROJECT_DIR$/dao/src/main/java/db/PermissionsDao.java" />
-        <option value="$PROJECT_DIR$/dao/src/main/java/db/RolesDao.java" />
-        <option value="$PROJECT_DIR$/dao/src/main/java/db/UsersDao.java" />
-        <option value="$PROJECT_DIR$/services/src/main/java/services/CategoryService.java" />
-        <option value="$PROJECT_DIR$/services/src/main/java/services/PermissionsService.java" />
-        <option value="$PROJECT_DIR$/services/src/main/java/services/RolesService.java" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/jsp/test.jsp" />
-        <option value="$PROJECT_DIR$/services/src/main/java/ManualTesting.java" />
-        <option value="$PROJECT_DIR$/dao/src/main/java/db/NewsDaoTest.java" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/jsp/logInPage.html" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/dispatcher-servlet.xml" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/tiles.xml" />
-        <option value="$PROJECT_DIR$/dao/src/test/resources/entities-hib-test.xml" />
         <option value="$PROJECT_DIR$/dao/src/main/resources/entities-hib.xml" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/spring-security.xml" />
-        <option value="$PROJECT_DIR$/web/src/main/java/dto/ShowNewsConfig.java" />
-        <option value="$PROJECT_DIR$/dao/src/main/java/pojos/News.java" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/jsp/common/footer.jsp" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/jsp/layouts/default.jspx" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/jsp/showNews.jsp" />
-        <option value="$PROJECT_DIR$/services/src/main/java/services/INewsService.java" />
-        <option value="$PROJECT_DIR$/services/src/main/java/services/IService.java" />
-        <option value="$PROJECT_DIR$/services/src/main/java/services/NewsService.java" />
-        <option value="$PROJECT_DIR$/services/src/main/java/services/UsersService.java" />
-        <option value="$PROJECT_DIR$/web/src/main/java/controllers/MainController.java" />
-        <option value="$PROJECT_DIR$/dao/src/main/java/db/BaseDao.java" />
-        <option value="$PROJECT_DIR$/dao/src/main/java/db/Dao.java" />
-        <option value="$PROJECT_DIR$/services/src/main/java/services/BaseService.java" />
-        <option value="$PROJECT_DIR$/dao/src/main/java/db/NewsDao.java" />
-        <option value="$PROJECT_DIR$/dao/src/main/resources/log4j.properties" />
-        <option value="$PROJECT_DIR$/services/src/main/resources/log4j.properties" />
-        <option value="$PROJECT_DIR$/web/src/main/resources/log4j.properties" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/META-INF/context.xml" />
-        <option value="$PROJECT_DIR$/dao/src/test/java/NewsDaoTest.java" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/jsp/logInPage.jsp" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/jsp/common/header.jsp" />
-        <option value="$PROJECT_DIR$/dao/src/main/java/pojos/Category.java" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/dao/pom.xml" />
-        <option value="$PROJECT_DIR$/services/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/web/pom.xml" />
       </list>
     </option>
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
   </component>
@@ -193,6 +419,11 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
@@ -201,16 +432,6 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="web" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-      </PATH>
       <PATH>
         <PATH_ELEMENT>
           <option name="myItemId" value="" />
@@ -243,10 +464,13 @@
       </PATH>
     </treeState>
   </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
-    <option name="width" value="1529" />
+    <option name="width" value="1544" />
     <option name="height" value="918" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -256,10 +480,8 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <OptionsSetting value="true" id="Undo Check Out" />
-    <OptionsSetting value="true" id="Get Latest Version" />
-    <ConfirmationsSetting value="2" id="Add" />
-    <ConfirmationsSetting value="2" id="Remove" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -269,12 +491,31 @@
       <showLibraryContents />
       <hideEmptyPackages />
       <abbreviatePackageNames />
-      <autoscrollToSource ProjectPane="true" />
-      <autoscrollFromSource ProjectPane="true" />
+      <autoscrollToSource />
+      <autoscrollFromSource />
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scratches">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.intellij.ide.scratch.ScratchProjectViewPane$MyProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newspaperSpring" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -289,133 +530,54 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="newspaperGradle" />
+              <option name="myItemId" value="newspaperSpring" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
         <option name="show-excluded-files" value="false" />
       </pane>
-      <pane id="Scope" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="GoToClass.includeLibraries" value="false" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="project.structure.last.edited" value="Problems" />
-    <property name="project.structure.proportion" value="0.15465729" />
-    <property name="project.structure.side.proportion" value="0.38293445" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../newspaperHib" />
-    <property name="recentsLimit" value="5" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="LayoutCode.rearrangeEntriesXML" value="false" />
-    <property name="restartRequiresConfirmation" value="true" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="FullScreen" value="false" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="70" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="72" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="73" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder2" value="2" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="70" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder3" value="3" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth4" value="112" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder4" value="4" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth5" value="720" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder5" value="5" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth0" value="75" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth1" value="74" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth2" value="75" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth3" value="75" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder3" value="3" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth4" value="74" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth5" value="744" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder5" value="5" />
-    <property name="options.lastSelected" value="configurable.group.editor" />
-    <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="recentsLimit" value="5" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\JavaProjects\newspaperSpring\dao\src\test\resources" />
-      <recent name="C:\JavaProjects\newspaperSpring\web\src\main\webapp\WEB-INF" />
-      <recent name="C:\JavaProjects\newspaperSpring\dao\src\main\resources" />
-      <recent name="C:\JavaProjects\newspaperSpring\web\src\main\webapp\WEB-INF\jsp" />
-      <recent name="C:\JavaProjects\newspaperSpring\services\src\main\resources" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\JavaProjects\newspaperSpring\web\src\main\resources\i18n" />
-      <recent name="C:\JavaProjects\newspaperSpring\web\src\main\java\controllers" />
-      <recent name="C:\JavaProjects\newspaperSpring\web\src\main\webapp\WEB-INF" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Tomcat Server.Local">
-    <configuration default="false" name="NewsDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Tomcat Server.loc">
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="dao" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="NewsDaoTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
       <method />
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -438,126 +600,6 @@
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
-      <deployment />
-      <server-settings />
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <method />
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <method />
-    </configuration>
-    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
-      <module name="" />
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="run-app" />
-      <setting name="depsClasspath" value="false" />
-      <setting name="passParentEnv" value="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <setting name="launchBrowser" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list />
-            </option>
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="JarApplication" factoryName="JAR Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <pass-parent-envs>true</pass-parent-envs>
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
-      <option name="BCName" value="" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="FlashPlayerDebugger.exe" />
-        </LauncherParameters>
-      </option>
-      <option name="moduleName" value="" />
-      <option name="trusted" value="true" />
-      <method />
-    </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
       <option name="TESTING_TYPE" value="0" />
@@ -577,6 +619,47 @@
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
@@ -614,6 +697,20 @@
       <option name="usbDebugPort" value="7936" />
       <method />
     </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -630,48 +727,119 @@
       </ExternalSystemSettings>
       <method />
     </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
       <method />
     </configuration>
-    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="myFilePath" />
-      <option name="GLUE" />
-      <option name="myNameFilter" />
-      <option name="myGeneratedName" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="com.intellij.database.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
       <method />
     </configuration>
-    <configuration default="false" name="Local" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.56" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="">
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
+    <configuration default="false" name="loc" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.53" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="web:war exploded">
@@ -682,7 +850,6 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_newspaperSpring" />
-        <option name="JNDI_PORT" value="1098" />
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
@@ -690,13 +857,9 @@
       <predefined_log_file id="Tomcat Host Manager" enabled="false" />
       <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <RunnerSettings RunnerId="Cover" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="50877" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
+        <option name="DEBUG_PORT" value="49399" />
       </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
@@ -748,204 +911,63 @@
         </option>
       </method>
     </configuration>
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Local" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.NewsDaoTest" />
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.loc" />
     </list>
-    <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.NewsDaoTest" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration" cleanupOnStartRun="true">
-    <configuration>C:\Users\NotePad.by\AppData\Roaming\Subversion</configuration>
-    <supportedVersion>125</supportedVersion>
-  </component>
-  <component name="SvnFileUrlMappingImpl">
-    <option name="myMappingRoots">
-      <list>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\JavaProjects\newspaperGradle" />
-          <option name="myCopyRoot" value="C:\JavaProjects\newspaperGradle" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\JavaProjects\newspaperGradle\.idea" />
-          <option name="myCopyRoot" value="C:\JavaProjects\newspaperGradle\.idea" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\JavaProjects\newspaperGradle\dao" />
-          <option name="myCopyRoot" value="C:\JavaProjects\newspaperGradle\dao" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\JavaProjects\newspaperGradle\services" />
-          <option name="myCopyRoot" value="C:\JavaProjects\newspaperGradle\services" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\JavaProjects\newspaperGradle\web" />
-          <option name="myCopyRoot" value="C:\JavaProjects\newspaperGradle\web" />
-        </SvnCopyRootSimple>
-      </list>
-    </option>
-    <option name="myMoreRealMappingRoots">
-      <list>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\JavaProjects\newspaperGradle" />
-          <option name="myCopyRoot" value="C:\JavaProjects\newspaperGradle" />
-        </SvnCopyRootSimple>
-      </list>
-    </option>
+    <configuration>C:\Users\prudnikov\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="035320b1-beb4-4d83-b425-0d73e57c3c43" name="Default" comment="" />
-      <created>1427632719047</created>
+      <changelist id="d9012b68-4aa0-4c7c-9173-6e60088d7259" name="Default" comment="" />
+      <created>1434803458721</created>
       <option name="number" value="Default" />
-      <updated>1427632719047</updated>
-      <workItem from="1427632720323" duration="472000" />
-      <workItem from="1427633231829" duration="1076000" />
-      <workItem from="1427634540495" duration="2856000" />
-      <workItem from="1427699853084" duration="7454000" />
-      <workItem from="1427707503124" duration="2087000" />
-      <workItem from="1427711993785" duration="14451000" />
-      <workItem from="1427790000434" duration="1875000" />
-      <workItem from="1427791886417" duration="556000" />
-      <workItem from="1427792451809" duration="10170000" />
-      <workItem from="1427817750912" duration="3838000" />
-      <workItem from="1427830750008" duration="4650000" />
-      <workItem from="1427872761843" duration="25789000" />
-      <workItem from="1427966745917" duration="13483000" />
-      <workItem from="1427997049787" duration="1502000" />
-      <workItem from="1428048013773" duration="837000" />
-      <workItem from="1428053196512" duration="4780000" />
-      <workItem from="1428058120046" duration="22437000" />
-      <workItem from="1428092542279" duration="120000" />
-      <workItem from="1428092904163" duration="83000" />
-      <workItem from="1428098011382" duration="427000" />
-      <workItem from="1428130513599" duration="3826000" />
-      <workItem from="1428513255400" duration="1066000" />
-      <workItem from="1429035429093" duration="629000" />
-      <workItem from="1429971111919" duration="433000" />
+      <updated>1434803458721</updated>
+      <workItem from="1434803460462" duration="147000" />
+      <workItem from="1434803613416" duration="347000" />
+      <workItem from="1434804389645" duration="1979000" />
     </task>
-    <task id="LOCAL-00001">
-      <created>1427728734784</created>
-      <option name="number" value="00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1427728734784</updated>
-    </task>
-    <task id="LOCAL-00002">
-      <created>1427811526108</created>
-      <option name="number" value="00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1427811526108</updated>
-    </task>
-    <task id="LOCAL-00003">
-      <created>1427909482363</created>
-      <option name="number" value="00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1427909482363</updated>
-    </task>
-    <task id="LOCAL-00004">
-      <created>1427974480327</created>
-      <option name="number" value="00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1427974480327</updated>
-    </task>
-    <task id="LOCAL-00005" summary="First version with correctly working Autowiring">
-      <created>1427986254982</created>
-      <option name="number" value="00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1427986254992</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Pre-ready version">
-      <created>1428091170069</created>
-      <option name="number" value="00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1428091170069</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Context.xml added">
-      <created>1428092659337</created>
-      <option name="number" value="00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1428092659337</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Tests refactored">
-      <created>1428092977203</created>
-      <option name="number" value="00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1428092977203</updated>
-    </task>
-    <task id="LOCAL-00009">
-      <created>1428098115414</created>
-      <option name="number" value="00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1428098115414</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124897000" />
-  </component>
-  <component name="TodoView" selected-index="0">
-    <todo-panel id="selected-file">
-      <are-packages-shown value="false" />
-      <are-modules-shown value="false" />
-      <flatten-packages value="false" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <are-modules-shown value="false" />
-      <flatten-packages value="false" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="default-changelist">
-      <are-packages-shown value="false" />
-      <are-modules-shown value="false" />
-      <flatten-packages value="false" />
-      <is-autoscroll-to-source value="false" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="2473000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1529" height="918" extended-state="6" />
+    <frame x="-9" y="-9" width="1544" height="918" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289256" sideWeight="0.50043595" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32767403" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15693113" sideWeight="0.49917355" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32987013" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32987013" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299458" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7220779" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24728997" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24932249" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6446281" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32767403" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289256" sideWeight="0.49956408" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5896104" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8033058" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.55454546" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289256" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29226556" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32868353" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.017436791" sideWeight="0.5008264" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29917356" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -959,23 +981,8 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <option name="myTodoPanelSettings">
-      <TodoPanelSettings />
-    </option>
-    <MESSAGE value="First version with correctly working Autowiring" />
-    <MESSAGE value="Pre-ready version" />
-    <MESSAGE value="Context.xml added" />
-    <MESSAGE value="Tests refactored" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
-  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints-dialog>
-        <breakpoints-dialog />
-      </breakpoints-dialog>
-      <option name="time" value="20" />
-    </breakpoint-manager>
+    <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -983,361 +990,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/services/src/main/java/services/UsersService.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/src/test/resources/entities-hib-test.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
-          <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/src/main/java/db/PermissionsDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/src/main/java/db/UsersDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/src/main/java/pojos/Permissions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1445">
-          <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/src/main/java/pojos/Roles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1207">
-          <caret line="13" column="77" selection-start-line="13" selection-start-column="77" selection-end-line="13" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/src/main/java/pojos/Users.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1004" max-vertical-offset="1581">
-          <caret line="108" column="25" selection-start-line="108" selection-start-column="25" selection-end-line="108" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3830156" vertical-offset="0" max-vertical-offset="577">
-          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
-          <caret line="0" column="37" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.029462738" vertical-offset="0" max-vertical-offset="577">
-          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/jsp/common/header.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22118959" vertical-offset="0" max-vertical-offset="538">
-          <caret line="7" column="66" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/META-INF/context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.029462738" vertical-offset="0" max-vertical-offset="577">
-          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/dispatcher-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.0" vertical-offset="281" max-vertical-offset="1037">
-          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/tiles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="782">
-          <caret line="35" column="47" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/spring-security.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/jsp/layouts/default.jspx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.384615" vertical-offset="0" max-vertical-offset="510">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/jsp/addNews.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/jsp/showSingleNews.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="577">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/src/main/java/pojos/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1003">
-          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/src/main/java/db/BaseDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="813" max-vertical-offset="1377">
-          <caret line="85" column="5" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/src/main/java/db/CategoryDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/src/main/java/pojos/News.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1700">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/src/main/java/db/NewsDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
-          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/jsp/logInPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.1153846" vertical-offset="174" max-vertical-offset="595">
-          <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/src/main/java/services/IService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/src/main/java/db/RolesDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/src/main/resources/services.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.88" vertical-offset="59" max-vertical-offset="442">
-          <caret line="18" column="91" selection-start-line="18" selection-start-column="87" selection-end-line="18" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/src/main/java/services/PermissionsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/resources/i18n/messages_ru.properties">
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06215722" vertical-offset="0" max-vertical-offset="547">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/resources/i18n/messages_en.properties">
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="136">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/resources/i18n/messages.properties">
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="136">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/jsp/showNews.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="374">
-          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/src/main/resources/ehcache.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="7276">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/src/main/resources/ehcache.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/src/main/resources/entities-hib.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="816">
-          <caret line="36" column="55" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/src/main/java/services/RolesService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/src/main/java/services/BaseService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="1088">
-          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/src/main/java/services/INewsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/src/main/java/services/NewsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/java/controllers/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="790" max-vertical-offset="1581">
-          <caret line="85" column="60" selection-start-line="85" selection-start-column="60" selection-end-line="85" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/src/main/java/services/CategoryService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17677642" vertical-offset="0" max-vertical-offset="577">
-          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/src/main/java/db/Dao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14731368" vertical-offset="0" max-vertical-offset="577">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/src/test/java/NewsDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27659574" vertical-offset="609" max-vertical-offset="1173">
-          <caret line="45" column="60" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/newspaperSpring.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="565">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6464471" vertical-offset="103" max-vertical-offset="833">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/dao.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1240" max-vertical-offset="2080">
-          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
-          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-          <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/web.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2160">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -1345,16 +1000,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2523" max-vertical-offset="4400">
-          <caret line="138" column="0" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/pom.xml">
+    <entry file="file://$PROJECT_DIR$/dao/src/main/resources/entities-hib.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.678426" vertical-offset="0" max-vertical-offset="740">
-          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.5730337">
+          <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.43826324">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -1365,11 +1028,11 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>web:war exploded</last-edited>
+          <last-edited>web:war</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.38293445" />
+                <option value="0.2" />
                 <option value="0.5" />
               </list>
             </option>
@@ -1378,11 +1041,11 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Spring (web)|Spring</last-edited>
+          <last-edited>Web</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.38293445" />
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
@@ -1393,7 +1056,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.38293445" />
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
@@ -1401,11 +1064,11 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>1.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.38293445" />
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
@@ -1413,11 +1076,23 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Spring|web</last-edited>
+          <last-edited>Spring|dao</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.38293445" />
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
@@ -1425,11 +1100,11 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: jstl:jstl:1.2</last-edited>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.38293445" />
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>

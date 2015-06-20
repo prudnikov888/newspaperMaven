@@ -1,0 +1,14 @@
+# Specifics files
+*.class
+*.iml
+*.*~
+
+# Idea folders
+.idea
+target
+
+# Package Files #
+*.jar
+*.war
+*.ear
+

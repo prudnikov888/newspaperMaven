@@ -1,8 +1,0 @@
-package services;
-
-import org.springframework.stereotype.Service;
-import pojos.Roles;
-@Service
-public class RolesService extends BaseService<Roles> {
-}
-

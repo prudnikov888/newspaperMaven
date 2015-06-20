@@ -1,7 +1,0 @@
-package db;
-
-import org.springframework.stereotype.Repository;
-import pojos.Roles;
-@Repository
-public class RolesDao extends BaseDao<Roles> {
-}

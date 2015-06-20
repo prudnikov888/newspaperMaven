@@ -1,7 +1,0 @@
-package services;
-
-import org.springframework.stereotype.Service;
-import pojos.Category;
-@Service
-public class CategoryService extends BaseService<Category> {
-}

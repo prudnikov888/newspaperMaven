@@ -13,7 +13,7 @@
     <context:component-scan base-package="pojos"/>
     <context:component-scan base-package="db"/>
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
-        <property name="url" value="jdbc:mysql://localhost:3306/newspaperhib"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/newspaper"/>
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
         <property name="username" value="root"/>
         <property name="password" value=""/>

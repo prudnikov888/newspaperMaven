@@ -1,7 +1,0 @@
-package db;
-
-import org.springframework.stereotype.Repository;
-import pojos.Permissions;
-@Repository
-public class PermissionsDao extends BaseDao<Permissions> {
-}
