@@ -6,6 +6,7 @@
 # Idea folders
 .idea
 target
+workspace.xml
 
 # Package Files #
 *.jar
