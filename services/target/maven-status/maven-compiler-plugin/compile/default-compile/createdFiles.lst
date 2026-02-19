@@ -1,8 +1,0 @@
-services\IService.class
-services\NewsService.class
-services\BaseService.class
-services\INewsService.class
-services\PermissionsService.class
-services\UsersService.class
-services\RolesService.class
-services\CategoryService.class
