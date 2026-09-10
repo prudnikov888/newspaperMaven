@@ -1,21 +1,21 @@
 package services;
 
 import db.NewsDao;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.jupiter.MockitoExtension;
 import pojos.News;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-@RunWith(MockitoJUnitRunner.class)
+@ExtendWith(MockitoExtension.class)
 public class NewsServiceTest {
 
     @Mock
@@ -26,7 +26,7 @@ public class NewsServiceTest {
 
     private News testNews;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         testNews = new News();
         testNews.setNewsId(1);

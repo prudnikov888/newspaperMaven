@@ -1,27 +1,27 @@
 package db;
 
-import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.criterion.Criterion;
-import org.hibernate.criterion.LogicalExpression;
-import org.hibernate.criterion.Restrictions;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.hibernate.query.Query;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.jupiter.MockitoExtension;
 import pojos.Users;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-@RunWith(MockitoJUnitRunner.class)
+@ExtendWith(MockitoExtension.class)
 public class UsersDaoTest {
+
+    private static final String FIND_BY_EMAIL_AND_PASS_HQL =
+            "FROM Users u WHERE u.email = :email AND u.pass = :pass";
 
     @Mock
     private SessionFactory sessionFactory;
@@ -30,14 +30,14 @@ public class UsersDaoTest {
     private Session session;
 
     @Mock
-    private Criteria criteria;
+    private Query<Users> query;
 
     @InjectMocks
     private UsersDao usersDao;
 
     private Users testUser;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         testUser = new Users();
         testUser.setUserId(1);
@@ -47,15 +47,21 @@ public class UsersDaoTest {
         testUser.setSurname("User");
 
         when(sessionFactory.getCurrentSession()).thenReturn(session);
-        when(session.createCriteria(Users.class)).thenReturn(criteria);
+    }
+
+    private void stubQuery(String email, String pass) {
+        when(session.createQuery(FIND_BY_EMAIL_AND_PASS_HQL, Users.class)).thenReturn(query);
+        when(query.setParameter("email", email)).thenReturn(query);
+        when(query.setParameter("pass", pass)).thenReturn(query);
     }
 
     @Test
     public void testCheckUser_ValidCredentials_ReturnsTrue() {
         // Arrange
+        stubQuery("test@example.com", "password123");
         List<Users> usersList = new ArrayList<>();
         usersList.add(testUser);
-        when(criteria.list()).thenReturn(usersList);
+        when(query.list()).thenReturn(usersList);
 
         // Act
         boolean result = usersDao.checkUser("test@example.com", "password123");
@@ -63,29 +69,31 @@ public class UsersDaoTest {
         // Assert
         assertTrue(result);
         verify(sessionFactory).getCurrentSession();
-        verify(session).createCriteria(Users.class);
-        verify(criteria).add(any(LogicalExpression.class));
-        verify(criteria).list();
+        verify(session).createQuery(FIND_BY_EMAIL_AND_PASS_HQL, Users.class);
+        verify(query).setParameter("email", "test@example.com");
+        verify(query).setParameter("pass", "password123");
+        verify(query).list();
     }
 
     @Test
     public void testCheckUser_InvalidCredentials_ReturnsFalse() {
         // Arrange
-        List<Users> emptyList = new ArrayList<>();
-        when(criteria.list()).thenReturn(emptyList);
+        stubQuery("wrong@example.com", "wrongpass");
+        when(query.list()).thenReturn(new ArrayList<>());
 
         // Act
         boolean result = usersDao.checkUser("wrong@example.com", "wrongpass");
 
         // Assert
         assertFalse(result);
-        verify(criteria).list();
+        verify(query).list();
     }
 
     @Test
     public void testGetUser_ValidCredentials_ReturnsUser() {
         // Arrange
-        when(criteria.uniqueResult()).thenReturn(testUser);
+        stubQuery("test@example.com", "password123");
+        when(query.uniqueResult()).thenReturn(testUser);
 
         // Act
         Users result = usersDao.getUser("test@example.com", "password123");
@@ -95,33 +103,36 @@ public class UsersDaoTest {
         assertEquals(testUser, result);
         assertEquals("test@example.com", result.getEmail());
         assertEquals("password123", result.getPass());
-        verify(criteria).uniqueResult();
+        verify(query).uniqueResult();
     }
 
     @Test
     public void testGetUser_InvalidCredentials_ReturnsNull() {
         // Arrange
-        when(criteria.uniqueResult()).thenReturn(null);
+        stubQuery("wrong@example.com", "wrongpass");
+        when(query.uniqueResult()).thenReturn(null);
 
         // Act
         Users result = usersDao.getUser("wrong@example.com", "wrongpass");
 
         // Assert
         assertNull(result);
-        verify(criteria).uniqueResult();
+        verify(query).uniqueResult();
     }
 
     @Test
-    public void testCheckUser_CriteriaSetup() {
+    public void testCheckUser_QuerySetup() {
         // Arrange
+        stubQuery("test@example.com", "password123");
         List<Users> usersList = new ArrayList<>();
         usersList.add(testUser);
-        when(criteria.list()).thenReturn(usersList);
+        when(query.list()).thenReturn(usersList);
 
         // Act
         usersDao.checkUser("test@example.com", "password123");
 
         // Assert
-        verify(criteria).add(any(LogicalExpression.class));
+        verify(query).setParameter("email", "test@example.com");
+        verify(query).setParameter("pass", "password123");
     }
 }

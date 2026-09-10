@@ -2,18 +2,18 @@ package db;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.jupiter.MockitoExtension;
 import pojos.Category;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-@RunWith(MockitoJUnitRunner.class)
+@ExtendWith(MockitoExtension.class)
 public class CategoryDaoTest {
 
     @Mock
@@ -27,7 +27,7 @@ public class CategoryDaoTest {
 
     private Category testCategory;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         testCategory = new Category();
         testCategory.setCategoryId(1);
@@ -43,14 +43,14 @@ public class CategoryDaoTest {
 
         // Assert
         verify(sessionFactory).getCurrentSession();
-        verify(session).saveOrUpdate(testCategory);
+        verify(session).merge(testCategory);
     }
 
     @Test
     public void testGet() {
         // Arrange
         Integer categoryId = 1;
-        when(session.get(Category.class, categoryId)).thenReturn(testCategory);
+        when(session.find(Category.class, categoryId)).thenReturn(testCategory);
 
         // Act
         Category result = categoryDao.get(categoryId);
@@ -58,28 +58,28 @@ public class CategoryDaoTest {
         // Assert
         assertNotNull(result);
         assertEquals(testCategory, result);
-        verify(session).get(Category.class, categoryId);
+        verify(session).find(Category.class, categoryId);
     }
 
     @Test
     public void testGet_NotFound_ReturnsNull() {
         // Arrange
         Integer categoryId = 999;
-        when(session.get(Category.class, categoryId)).thenReturn(null);
+        when(session.find(Category.class, categoryId)).thenReturn(null);
 
         // Act
         Category result = categoryDao.get(categoryId);
 
         // Assert
         assertNull(result);
-        verify(session).get(Category.class, categoryId);
+        verify(session).find(Category.class, categoryId);
     }
 
     @Test
     public void testLoad() {
         // Arrange
         Integer categoryId = 1;
-        when(session.load(Category.class, categoryId)).thenReturn(testCategory);
+        when(session.getReference(Category.class, categoryId)).thenReturn(testCategory);
 
         // Act
         Category result = categoryDao.load(categoryId);
@@ -87,7 +87,7 @@ public class CategoryDaoTest {
         // Assert
         assertNotNull(result);
         assertEquals(testCategory, result);
-        verify(session).load(Category.class, categoryId);
+        verify(session).getReference(Category.class, categoryId);
     }
 
     @Test
@@ -97,6 +97,6 @@ public class CategoryDaoTest {
 
         // Assert
         verify(sessionFactory).getCurrentSession();
-        verify(session).delete(testCategory);
+        verify(session).remove(testCategory);
     }
 }

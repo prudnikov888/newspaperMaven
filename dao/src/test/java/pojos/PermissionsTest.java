@@ -1,9 +1,9 @@
 package pojos;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class PermissionsTest {
 
@@ -11,7 +11,7 @@ public class PermissionsTest {
     private Permissions permission2;
     private Permissions permission3;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         permission1 = new Permissions();
         permission1.setRoleId(1);

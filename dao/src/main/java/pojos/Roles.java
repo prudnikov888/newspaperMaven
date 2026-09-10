@@ -1,9 +1,8 @@
 package pojos;
 
 import org.hibernate.annotations.CacheConcurrencyStrategy;
-import org.hibernate.annotations.Cascade;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.io.Serializable;
 import java.util.Set;
 
@@ -29,8 +28,7 @@ public class Roles implements Serializable {
             inverseJoinColumns = {@JoinColumn (name = "userId")})
     private Set<Users> users;
 
-    @OneToOne (mappedBy = "role")
-    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
+    @OneToOne (mappedBy = "role", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private Permissions permission;
 
     public Permissions getPermission() {

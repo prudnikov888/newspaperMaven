@@ -3,20 +3,20 @@ package db;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.jupiter.MockitoExtension;
 import pojos.Category;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 /**
  * Tests BaseDao functionality through CategoryDao (generic type is preserved only in subclasses).
  */
-@RunWith(MockitoJUnitRunner.class)
+@ExtendWith(MockitoExtension.class)
 public class BaseDaoTest {
 
     @Mock
@@ -29,7 +29,7 @@ public class BaseDaoTest {
 
     private Category testCategory;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         categoryDao = new CategoryDao(sessionFactory);
         testCategory = new Category();
@@ -46,26 +46,26 @@ public class BaseDaoTest {
 
         // Assert
         verify(sessionFactory).getCurrentSession();
-        verify(session).saveOrUpdate(testCategory);
+        verify(session).merge(testCategory);
     }
 
     @Test
     public void testSaveOrUpdate_WithException() {
         // Arrange
-        doThrow(new HibernateException("Test exception")).when(session).saveOrUpdate(testCategory);
+        doThrow(new HibernateException("Test exception")).when(session).merge(testCategory);
 
         // Act
         categoryDao.saveOrUpdate(testCategory);
 
         // Assert - метод должен обработать исключение без проброса
-        verify(session).saveOrUpdate(testCategory);
+        verify(session).merge(testCategory);
     }
 
     @Test
     public void testGet() {
         // Arrange
         Integer id = 1;
-        when(session.get(Category.class, id)).thenReturn(testCategory);
+        when(session.find(Category.class, id)).thenReturn(testCategory);
 
         // Act
         Category result = categoryDao.get(id);
@@ -74,42 +74,42 @@ public class BaseDaoTest {
         assertNotNull(result);
         assertEquals(testCategory, result);
         verify(sessionFactory).getCurrentSession();
-        verify(session).get(Category.class, id);
+        verify(session).find(Category.class, id);
     }
 
     @Test
     public void testGet_NotFound_ReturnsNull() {
         // Arrange
         Integer id = 999;
-        when(session.get(Category.class, id)).thenReturn(null);
+        when(session.find(Category.class, id)).thenReturn(null);
 
         // Act
         Category result = categoryDao.get(id);
 
         // Assert
         assertNull(result);
-        verify(session).get(Category.class, id);
+        verify(session).find(Category.class, id);
     }
 
     @Test
     public void testGet_WithException() {
         // Arrange
         Integer id = 1;
-        when(session.get(Category.class, id)).thenThrow(new HibernateException("Test exception"));
+        when(session.find(Category.class, id)).thenThrow(new HibernateException("Test exception"));
 
         // Act
         Category result = categoryDao.get(id);
 
         // Assert - метод должен обработать исключение и вернуть null
         assertNull(result);
-        verify(session).get(Category.class, id);
+        verify(session).find(Category.class, id);
     }
 
     @Test
     public void testLoad() {
         // Arrange
         Integer id = 1;
-        when(session.load(Category.class, id)).thenReturn(testCategory);
+        when(session.getReference(Category.class, id)).thenReturn(testCategory);
 
         // Act
         Category result = categoryDao.load(id);
@@ -118,7 +118,7 @@ public class BaseDaoTest {
         assertNotNull(result);
         assertEquals(testCategory, result);
         verify(sessionFactory).getCurrentSession();
-        verify(session).load(Category.class, id);
+        verify(session).getReference(Category.class, id);
         verify(session).isDirty();
     }
 
@@ -126,14 +126,14 @@ public class BaseDaoTest {
     public void testLoad_WithException() {
         // Arrange
         Integer id = 1;
-        when(session.load(Category.class, id)).thenThrow(new HibernateException("Test exception"));
+        when(session.getReference(Category.class, id)).thenThrow(new HibernateException("Test exception"));
 
         // Act
         Category result = categoryDao.load(id);
 
         // Assert - метод должен обработать исключение и вернуть null
         assertNull(result);
-        verify(session).load(Category.class, id);
+        verify(session).getReference(Category.class, id);
     }
 
     @Test
@@ -143,19 +143,19 @@ public class BaseDaoTest {
 
         // Assert
         verify(sessionFactory).getCurrentSession();
-        verify(session).delete(testCategory);
+        verify(session).remove(testCategory);
     }
 
     @Test
     public void testDelete_WithException() {
         // Arrange
-        doThrow(new HibernateException("Test exception")).when(session).delete(testCategory);
+        doThrow(new HibernateException("Test exception")).when(session).remove(testCategory);
 
         // Act
         categoryDao.delete(testCategory);
 
         // Assert - метод должен обработать исключение без проброса
-        verify(session).delete(testCategory);
+        verify(session).remove(testCategory);
     }
 
     @Test

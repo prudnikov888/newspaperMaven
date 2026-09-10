@@ -1,9 +1,10 @@
 package db;
 
-import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -17,7 +18,7 @@ import java.lang.reflect.ParameterizedType;
 @Repository
 public class BaseDao<T> implements Dao<T>{
 
-    private static Logger log = Logger.getLogger(BaseDao.class);
+    private static final Logger log = LoggerFactory.getLogger(BaseDao.class);
 
     private SessionFactory sessionFactory;
 
@@ -36,7 +37,7 @@ public class BaseDao<T> implements Dao<T>{
     public void saveOrUpdate(T t){
         try {
             Session session = currentSession();
-            session.saveOrUpdate(t);
+            session.merge(t);
             log.info("saveOrUpdate(t):" + t);
             log.info("Save or update (commit):" + t);
          } catch (HibernateException e) {
@@ -50,7 +51,7 @@ public class BaseDao<T> implements Dao<T>{
         T t = null;
         try {
             Session session = currentSession();
-            t = (T) session.get(getPersistentClass(), id);
+            t = (T) session.find(getPersistentClass(), id);
             log.info("get clazz:" + t);
         } catch (HibernateException e) {
             log.error("Error get " + getPersistentClass() + " in Dao" + e);
@@ -63,7 +64,7 @@ public class BaseDao<T> implements Dao<T>{
         T t = null;
         try {
             Session session = currentSession();
-            t = (T) session.load(getPersistentClass(), id);
+            t = (T) session.getReference(getPersistentClass(), id);
             log.info("load() clazz:" + t);
             session.isDirty();
         } catch (HibernateException e) {
@@ -75,7 +76,7 @@ public class BaseDao<T> implements Dao<T>{
     public void delete(T t) {
         try {
             Session session = currentSession();
-            session.delete(t);
+            session.remove(t);
             log.info("Delete:" + t);
          } catch (HibernateException e) {
             log.error("Error save or update" + getPersistentClass() + "in Dao" + e);

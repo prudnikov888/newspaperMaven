@@ -1,9 +1,8 @@
 package pojos;
 
 import org.hibernate.annotations.CacheConcurrencyStrategy;
-import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.io.Serializable;
 /*
 This class describes Permissions entity
@@ -15,8 +14,6 @@ public class Permissions implements Serializable {
     public Permissions(){
     }
     @Id
-    @GenericGenerator(name = "gen", strategy = "foreign", parameters = @org.hibernate.annotations.Parameter(name = "property", value = "role"))
-    @GeneratedValue (generator = "gen")
     private int roleId;
 
     @Column (columnDefinition = "BIT")
@@ -29,6 +26,7 @@ public class Permissions implements Serializable {
     private boolean readNews;
 
     @OneToOne
+    @MapsId
     @JoinColumn (name = "role")
     private Roles role;
 

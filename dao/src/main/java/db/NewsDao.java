@@ -1,9 +1,10 @@
 package db;
 
-import org.apache.log4j.Logger;
-import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import pojos.News;
@@ -11,7 +12,7 @@ import pojos.News;
 import java.util.List;
 @Repository
 public class NewsDao extends BaseDao<News> {
-    private static Logger log = Logger.getLogger(NewsDao.class);
+    private static final Logger log = LoggerFactory.getLogger(NewsDao.class);
 
     @Autowired
     public NewsDao(SessionFactory sessionFactory){
@@ -31,7 +32,7 @@ public class NewsDao extends BaseDao<News> {
         }
         else
             hql = "SELECT N FROM News N ORDER BY N.category.categoryName ASC";
-        Query query = session.createQuery(hql);
+        Query<News> query = session.createQuery(hql, News.class);
         query.setFirstResult((selectedPage - 1)*newsOnPage);
         query.setMaxResults(newsOnPage);
         List <News> results = query.list();
@@ -44,7 +45,7 @@ public class NewsDao extends BaseDao<News> {
     public int countAllNews() {
         Session session = currentSession();
         String hql = "FROM News";
-        Query query = session.createQuery(hql);
+        Query<News> query = session.createQuery(hql, News.class);
         List<News> results = query.list();
         return results.size();
     }
@@ -56,8 +57,8 @@ public class NewsDao extends BaseDao<News> {
     public List<News> getAllNews() {
         Session session = currentSession();
         String hql = "FROM News";
-        Query query = session.createQuery(hql);
-        List <News> results = (List<News>) query.list();
+        Query<News> query = session.createQuery(hql, News.class);
+        List <News> results = query.list();
         return results;
     }
 }

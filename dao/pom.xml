@@ -4,12 +4,12 @@
     <parent>
         <artifactId>newspaperSpring</artifactId>
         <groupId>newspaperSpring</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>2.0.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
   <artifactId>dao</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>2.0.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>dao</name>
@@ -18,4 +18,24 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+
+  <dependencies>
+      <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-data-jpa</artifactId>
+      </dependency>
+      <dependency>
+          <!-- VERIFY: confirm latest patch on Maven Central; not confirmed whether Boot 4 BOM manages this -->
+          <groupId>com.mysql</groupId>
+          <artifactId>mysql-connector-j</artifactId>
+          <version>26.7.0</version>
+          <scope>runtime</scope>
+      </dependency>
+
+      <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-test</artifactId>
+          <scope>test</scope>
+      </dependency>
+  </dependencies>
   </project>

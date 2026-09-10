@@ -1,9 +1,8 @@
 package pojos;
 
 import org.hibernate.annotations.CacheConcurrencyStrategy;
-import org.hibernate.annotations.Cascade;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.io.Serializable;
 import java.util.Set;
 
@@ -33,8 +32,7 @@ public class Users implements Serializable {
     @OneToMany (mappedBy = "user")
     private Set<News> news;
 
-    @ManyToMany (mappedBy = "users")
-    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
+    @ManyToMany (mappedBy = "users", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private Set<Roles> roles;
 
     public int getUserId() {

@@ -1,18 +1,18 @@
 package services;
 
 import db.UsersDao;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.jupiter.MockitoExtension;
 import pojos.Users;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-@RunWith(MockitoJUnitRunner.class)
+@ExtendWith(MockitoExtension.class)
 public class UsersServiceTest {
 
     @Mock
@@ -23,7 +23,7 @@ public class UsersServiceTest {
 
     private Users testUser;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         testUser = new Users();
         testUser.setUserId(1);

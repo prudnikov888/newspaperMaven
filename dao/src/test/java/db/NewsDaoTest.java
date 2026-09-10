@@ -1,23 +1,23 @@
 package db;
 
-import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.hibernate.query.Query;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.jupiter.MockitoExtension;
 import pojos.News;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-@RunWith(MockitoJUnitRunner.class)
+@ExtendWith(MockitoExtension.class)
 public class NewsDaoTest {
 
     @Mock
@@ -27,14 +27,14 @@ public class NewsDaoTest {
     private Session session;
 
     @Mock
-    private Query query;
+    private Query<News> query;
 
     @InjectMocks
     private NewsDao newsDao;
 
     private News testNews;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         testNews = new News();
         testNews.setNewsId(1);
@@ -56,7 +56,7 @@ public class NewsDaoTest {
         List<News> newsList = new ArrayList<>();
         newsList.add(testNews);
 
-        when(session.createQuery("SELECT N FROM News N ORDER BY N.postDay DESC")).thenReturn(query);
+        when(session.createQuery("SELECT N FROM News N ORDER BY N.postDay DESC", News.class)).thenReturn(query);
         when(query.setFirstResult(anyInt())).thenReturn(query);
         when(query.setMaxResults(anyInt())).thenReturn(query);
         when(query.list()).thenReturn(newsList);
@@ -68,7 +68,7 @@ public class NewsDaoTest {
         assertNotNull(result);
         assertEquals(1, result.size());
         assertEquals(testNews, result.get(0));
-        verify(session).createQuery("SELECT N FROM News N ORDER BY N.postDay DESC");
+        verify(session).createQuery("SELECT N FROM News N ORDER BY N.postDay DESC", News.class);
         verify(query).setFirstResult(0);
         verify(query).setMaxResults(5);
         verify(query).list();
@@ -83,7 +83,7 @@ public class NewsDaoTest {
         List<News> newsList = new ArrayList<>();
         newsList.add(testNews);
 
-        when(session.createQuery("SELECT N FROM News N ORDER BY N.category.categoryName ASC")).thenReturn(query);
+        when(session.createQuery("SELECT N FROM News N ORDER BY N.category.categoryName ASC", News.class)).thenReturn(query);
         when(query.setFirstResult(anyInt())).thenReturn(query);
         when(query.setMaxResults(anyInt())).thenReturn(query);
         when(query.list()).thenReturn(newsList);
@@ -94,7 +94,7 @@ public class NewsDaoTest {
         // Assert
         assertNotNull(result);
         assertEquals(1, result.size());
-        verify(session).createQuery("SELECT N FROM News N ORDER BY N.category.categoryName ASC");
+        verify(session).createQuery("SELECT N FROM News N ORDER BY N.category.categoryName ASC", News.class);
         verify(query).setFirstResult(0);
         verify(query).setMaxResults(5);
     }
@@ -107,7 +107,7 @@ public class NewsDaoTest {
         String sortBy = "postDay";
         List<News> newsList = new ArrayList<>();
 
-        when(session.createQuery("SELECT N FROM News N ORDER BY N.postDay DESC")).thenReturn(query);
+        when(session.createQuery("SELECT N FROM News N ORDER BY N.postDay DESC", News.class)).thenReturn(query);
         when(query.setFirstResult(anyInt())).thenReturn(query);
         when(query.setMaxResults(anyInt())).thenReturn(query);
         when(query.list()).thenReturn(newsList);
@@ -127,7 +127,7 @@ public class NewsDaoTest {
         newsList.add(testNews);
         newsList.add(new News());
 
-        when(session.createQuery("FROM News")).thenReturn(query);
+        when(session.createQuery("FROM News", News.class)).thenReturn(query);
         when(query.list()).thenReturn(newsList);
 
         // Act
@@ -135,7 +135,7 @@ public class NewsDaoTest {
 
         // Assert
         assertEquals(2, result);
-        verify(session).createQuery("FROM News");
+        verify(session).createQuery("FROM News", News.class);
         verify(query).list();
     }
 
@@ -144,7 +144,7 @@ public class NewsDaoTest {
         // Arrange
         List<News> emptyList = new ArrayList<>();
 
-        when(session.createQuery("FROM News")).thenReturn(query);
+        when(session.createQuery("FROM News", News.class)).thenReturn(query);
         when(query.list()).thenReturn(emptyList);
 
         // Act
@@ -160,7 +160,7 @@ public class NewsDaoTest {
         List<News> newsList = new ArrayList<>();
         newsList.add(testNews);
 
-        when(session.createQuery("FROM News")).thenReturn(query);
+        when(session.createQuery("FROM News", News.class)).thenReturn(query);
         when(query.list()).thenReturn(newsList);
 
         // Act
@@ -170,7 +170,7 @@ public class NewsDaoTest {
         assertNotNull(result);
         assertEquals(1, result.size());
         assertEquals(testNews, result.get(0));
-        verify(session).createQuery("FROM News");
+        verify(session).createQuery("FROM News", News.class);
         verify(query).list();
     }
 
@@ -179,7 +179,7 @@ public class NewsDaoTest {
         // Arrange
         List<News> emptyList = new ArrayList<>();
 
-        when(session.createQuery("FROM News")).thenReturn(query);
+        when(session.createQuery("FROM News", News.class)).thenReturn(query);
         when(query.list()).thenReturn(emptyList);
 
         // Act

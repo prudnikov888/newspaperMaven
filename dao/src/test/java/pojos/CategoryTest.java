@@ -1,12 +1,12 @@
 package pojos;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class CategoryTest {
 
@@ -14,7 +14,7 @@ public class CategoryTest {
     private Category category2;
     private Category category3;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         category1 = new Category();
         category1.setCategoryId(1);

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      layout:decorate="~{layout/default}">
+<head>
+    <title>Новости</title>
+</head>
+<body>
+<div layout:fragment="content">
+
+    <div sec:authorize="hasRole('admin')">
+        <a th:href="@{/news/add}"><h3>Добавить новость</h3></a>
+    </div>
+    <div sec:authorize="!hasRole('admin')">
+        <a th:href="@{/login}"><h4>Войти в систему</h4></a>
+    </div>
+
+    <table border="1" cellspacing="0px">
+        <tr>
+            <td></td>
+            <td></td>
+            <td>
+                <!--Pagination elements-->
+                <table border="0" cellspacing="0px">
+                    <tr>
+                        <td>
+                            <a th:href="@{/news(selectedPage=1, newsOnPage=${newsOnPage}, sortBy=${sortBy})}"> [ 1 ] </a>
+                        </td>
+                        <td>
+                            <a th:href="@{/news(selectedPage=${selectedPage - 1}, newsOnPage=${newsOnPage}, sortBy=${sortBy})}">[ Назад ]</a>
+                        </td>
+                        <td>
+                            [ Текущая: <span th:text="${selectedPage}"></span> ]
+                        </td>
+                        <td>
+                            <a th:href="@{/news(selectedPage=${selectedPage + 1}, newsOnPage=${newsOnPage}, sortBy=${sortBy})}">[ Вперед ]</a>
+                        </td>
+                        <td>
+                            <a th:href="@{/news(selectedPage=${numberOfPages}, newsOnPage=${newsOnPage}, sortBy=${sortBy})}">[ <span th:text="${numberOfPages}"></span> ]</a>
+                        </td>
+                        <td>
+                            <form th:action="@{/news}" method="get">
+                                Новостей на странице:
+                                <select size="1" name="newsOnPage" onchange="this.form.submit()">
+                                    <option th:value="${newsOnPage}" selected><b th:text="${newsOnPage}"></b></option>
+                                    <option value="5">5</option>
+                                    <option value="10">10</option>
+                                </select>
+                                Сортировать по:
+                                <select size="1" name="sortBy" onchange="this.form.submit()">
+                                    <option th:value="${sortBy}" selected><b th:text="${sortByFull}"></b></option>
+                                    <option value="postDay">По дате</option>
+                                    <option value="category">По категории</option>
+                                </select>
+                            </form>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </td>
+            <td sec:authorize="hasRole('admin')"></td>
+            <td sec:authorize="hasRole('admin')"></td>
+        </tr>
+        <tr>
+            <td th:text="#{postDay}"></td>
+            <td th:text="#{category}"></td>
+            <td th:text="#{newsFeed}"></td>
+            <td sec:authorize="hasRole('admin')"></td>
+            <td sec:authorize="hasRole('admin')"></td>
+        </tr>
+        <!--Showing list of news-->
+        <tr th:each="i : ${newsList}">
+            <td>
+                <b th:text="${i.postDay}"></b>&nbsp;
+            </td>
+            <td>
+                <b th:text="${i.category != null ? i.category.categoryName : ''}"></b>&nbsp;
+            </td>
+            <td>
+                <br/>
+                <a th:href="@{/news/{id}(id=${i.newsId})}" th:text="${i.title4ann}"></a>
+                <br/><br/>
+            </td>
+            <td sec:authorize="hasRole('admin')">
+                <br/>
+                <a th:href="@{/news/{id}/edit(id=${i.newsId})}">Редактировать новость</a>
+                <br/><br/>
+            </td>
+            <td sec:authorize="hasRole('admin')">
+                <br/>
+                <form th:action="@{/news/{id}/delete(id=${i.newsId})}" method="post" style="display:inline">
+                    <button type="submit">Удалить новость</button>
+                </form>
+                <br/><br/>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

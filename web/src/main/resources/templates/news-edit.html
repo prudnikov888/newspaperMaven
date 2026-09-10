@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/default}">
+<head>
+    <title>Редактирование новости</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <form th:action="@{/news/{id}/edit(id=${newsToEdit.newsId})}" method="post">
+        <table>
+            <tr>
+                <td><input type="hidden" name="newsId" th:value="${newsToEdit.newsId}"/></td>
+            </tr>
+            <tr>
+                <td>Название категории</td>
+                <td><input type="text" name="categoryName" th:value="${newsToEdit.category != null ? newsToEdit.category.categoryName : ''}" size="40"/></td>
+            </tr>
+            <tr>
+                <td>Название новости:</td>
+                <td><input type="text" name="title" th:value="${newsToEdit.title}" size="40"/></td>
+            </tr>
+            <tr>
+                <td>Аннотация к новости:</td>
+                <td><input type="text" name="title4ann" th:value="${newsToEdit.title4ann}" size="40"/></td>
+            </tr>
+            <tr>
+                <td>Автор новости:</td>
+                <td><input type="text" name="author" th:value="${newsToEdit.author}" size="40"/></td>
+            </tr>
+            <tr>
+                <td>Основной текст новости:</td>
+                <td><input type="text" name="mainText" th:value="${newsToEdit.mainText}" size="40"/></td>
+            </tr>
+            <tr>
+                <td>Дата публикации:</td>
+                <td><input type="text" name="postDay" th:value="${newsToEdit.postDay}" size="40"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Save"/></td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

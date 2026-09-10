@@ -3,6 +3,7 @@ package controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -10,7 +11,7 @@ import pojos.Category;
 import pojos.News;
 import services.NewsService;
 
-import javax.annotation.security.RolesAllowed;
+import jakarta.annotation.security.RolesAllowed;
 
 
 @Controller
@@ -19,7 +20,7 @@ public class MainController {
     @Autowired
     private NewsService newsService;
 
-    @RequestMapping(value = "/showNews", method = RequestMethod.GET)
+    @RequestMapping(value = "/news", method = RequestMethod.GET)
     public String showNews (ModelMap modelMap,
                             @RequestParam(value="newsOnPage", defaultValue = "5") int newsOnPage,
                             @RequestParam(value="selectedPage", defaultValue = "1") int selectedPage,
@@ -39,53 +40,53 @@ public class MainController {
             modelMap.addAttribute("sortByFull", "По дате");
         else
             modelMap.addAttribute("sortByFull", "По категории");
-        return "showNews";
+        return "news-list";
     }
 
     @RolesAllowed("admin")
-    @RequestMapping(value = "/addNews", method = RequestMethod.GET)
+    @RequestMapping(value = "/news/add", method = RequestMethod.GET)
     public String addNews () {
-        return "addNews";
+        return "news-add";
     }
 
     @RolesAllowed("admin")
-    @RequestMapping(value = "/editNews", method = RequestMethod.GET)
-    public String editNews (ModelMap modelMap, @RequestParam(value="id_for_editing") int newsId) {
+    @RequestMapping(value = "/news/{id}/edit", method = RequestMethod.GET)
+    public String editNews (ModelMap modelMap, @PathVariable("id") int newsId) {
         modelMap.addAttribute("newsToEdit", newsService.get(newsId));
-        return "editNews";
+        return "news-edit";
     }
 
     @RolesAllowed("admin")
-    @RequestMapping(value = "/addWriteNews", method = RequestMethod.GET)
+    @RequestMapping(value = "/news/add", method = RequestMethod.POST)
     public String addWriteNews (News news, @RequestParam(value="categoryName") String categoryName ) {
         Category category = new Category();
         category.setCategoryName(categoryName);
         news.setCategory(category);
         newsService.saveOrUpdate(news);
-        return "redirect:/showNews.form";
+        return "redirect:/news";
     }
 
     @RolesAllowed("admin")
-    @RequestMapping(value = "/editWriteNews", method = RequestMethod.GET)
+    @RequestMapping(value = "/news/{id}/edit", method = RequestMethod.POST)
     public String editWriteNews (News news, @RequestParam(value="categoryName") String categoryName ) {
         Category category = new Category();
         category.setCategoryName(categoryName);
         news.setCategory(category);
         newsService.saveOrUpdate(news);
-        return "redirect:/showNews.form";
+        return "redirect:/news";
     }
 
     @RolesAllowed("admin")
-    @RequestMapping(value = "/delNews", method = RequestMethod.GET)
-    public String writeNews (@RequestParam(value="id_for_deleting") int newsId) {
+    @RequestMapping(value = "/news/{id}/delete", method = RequestMethod.POST)
+    public String writeNews (@PathVariable("id") int newsId) {
         newsService.delete(newsService.get(newsId));
-        return "redirect:/showNews.form";
+        return "redirect:/news";
     }
 
-    @RequestMapping(value = "/showSingleNews", method = RequestMethod.GET)
-    public String showSingleNews (ModelMap modelMap, @RequestParam(value="id_for_showing") int newsId) {
+    @RequestMapping(value = "/news/{id}", method = RequestMethod.GET)
+    public String showSingleNews (ModelMap modelMap, @PathVariable("id") int newsId) {
         modelMap.addAttribute("singleNews", newsService.get(newsId));
-        return "showSingleNews";
+        return "news-single";
     }
 
     @RequestMapping(value = "/errorPage", method = RequestMethod.GET)
@@ -93,7 +94,7 @@ public class MainController {
         return "errorPage";
     }
 
-    @RequestMapping(value = "/logInPage", method = RequestMethod.GET)
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String logInPage () {
         return "logInPage";
     }

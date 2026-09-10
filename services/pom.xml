@@ -4,12 +4,12 @@
     <parent>
         <artifactId>newspaperSpring</artifactId>
         <groupId>newspaperSpring</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>2.0.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
   <artifactId>services</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>2.0.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>services</name>
@@ -23,6 +23,12 @@
             <groupId>newspaperSpring</groupId>
             <artifactId>dao</artifactId>
             <version>${newspaperSpring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>

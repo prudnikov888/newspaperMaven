@@ -1,12 +1,12 @@
 package pojos;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class UsersTest {
 
@@ -14,7 +14,7 @@ public class UsersTest {
     private Users user2;
     private Users user3;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         user1 = new Users();
         user1.setUserId(1);

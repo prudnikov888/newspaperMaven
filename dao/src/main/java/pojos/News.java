@@ -1,11 +1,8 @@
 package pojos;
 
 import org.hibernate.annotations.CacheConcurrencyStrategy;
-import org.hibernate.annotations.Cascade;
-import org.hibernate.annotations.CascadeType;
-import org.hibernate.annotations.Type;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.io.Serializable;
 
 /**
@@ -29,17 +26,15 @@ public class News implements Serializable {
     private String author;
     @Column
     private String postDay;
+    @Lob
     @Column
-    @Type(type="text")
     private String mainText;
 
-    @ManyToOne
-    @Cascade(CascadeType.SAVE_UPDATE)
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn (name = "user")
     private Users user;
 
-    @ManyToOne
-    @Cascade(CascadeType.SAVE_UPDATE)
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn (name = "category")
     private Category category;
 

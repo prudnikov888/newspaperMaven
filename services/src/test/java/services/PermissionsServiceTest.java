@@ -1,18 +1,18 @@
 package services;
 
 import db.PermissionsDao;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.jupiter.MockitoExtension;
 import pojos.Permissions;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-@RunWith(MockitoJUnitRunner.class)
+@ExtendWith(MockitoExtension.class)
 public class PermissionsServiceTest {
 
     @Mock
@@ -23,7 +23,7 @@ public class PermissionsServiceTest {
 
     private Permissions testPermission;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         testPermission = new Permissions();
         testPermission.setRoleId(1);

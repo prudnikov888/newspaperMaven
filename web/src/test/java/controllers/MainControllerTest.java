@@ -1,23 +1,22 @@
 package controllers;
 
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.ui.ModelMap;
-import pojos.Category;
 import pojos.News;
 import services.NewsService;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-@RunWith(MockitoJUnitRunner.class)
+@ExtendWith(MockitoExtension.class)
 public class MainControllerTest {
 
     @Mock
@@ -29,7 +28,7 @@ public class MainControllerTest {
     private News testNews;
     private ModelMap modelMap;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         modelMap = new ModelMap();
         testNews = new News();
@@ -53,7 +52,7 @@ public class MainControllerTest {
         String viewName = mainController.showNews(modelMap, 5, 1, "postDay");
 
         // Assert
-        assertEquals("showNews", viewName);
+        assertEquals("news-list", viewName);
         assertNotNull(modelMap.get("newsList"));
         assertEquals(2, (int) modelMap.get("numberOfPages"));
         assertEquals(1, (int) modelMap.get("selectedPage"));
@@ -76,7 +75,7 @@ public class MainControllerTest {
         String viewName = mainController.showNews(modelMap, 5, 1, "category");
 
         // Assert
-        assertEquals("showNews", viewName);
+        assertEquals("news-list", viewName);
         assertEquals("По категории", modelMap.get("sortByFull"));
         verify(newsService).getNewsList(1, 5, "category");
     }
@@ -118,20 +117,20 @@ public class MainControllerTest {
         String viewName = mainController.addNews();
 
         // Assert
-        assertEquals("addNews", viewName);
+        assertEquals("news-add", viewName);
     }
 
     @Test
     public void testEditNews() {
         // Arrange
-        Integer newsId = 1;
+        int newsId = 1;
         when(newsService.get(newsId)).thenReturn(testNews);
 
         // Act
         String viewName = mainController.editNews(modelMap, newsId);
 
         // Assert
-        assertEquals("editNews", viewName);
+        assertEquals("news-edit", viewName);
         assertEquals(testNews, modelMap.get("newsToEdit"));
         verify(newsService).get(newsId);
     }
@@ -147,7 +146,7 @@ public class MainControllerTest {
         String viewName = mainController.addWriteNews(news, categoryName);
 
         // Assert
-        assertEquals("redirect:/showNews.form", viewName);
+        assertEquals("redirect:/news", viewName);
         assertNotNull(news.getCategory());
         assertEquals(categoryName, news.getCategory().getCategoryName());
         verify(newsService).saveOrUpdate(news);
@@ -165,7 +164,7 @@ public class MainControllerTest {
         String viewName = mainController.editWriteNews(news, categoryName);
 
         // Assert
-        assertEquals("redirect:/showNews.form", viewName);
+        assertEquals("redirect:/news", viewName);
         assertNotNull(news.getCategory());
         assertEquals(categoryName, news.getCategory().getCategoryName());
         verify(newsService).saveOrUpdate(news);
@@ -174,14 +173,14 @@ public class MainControllerTest {
     @Test
     public void testDelNews() {
         // Arrange
-        Integer newsId = 1;
+        int newsId = 1;
         when(newsService.get(newsId)).thenReturn(testNews);
 
         // Act
         String viewName = mainController.writeNews(newsId);
 
         // Assert
-        assertEquals("redirect:/showNews.form", viewName);
+        assertEquals("redirect:/news", viewName);
         verify(newsService).get(newsId);
         verify(newsService).delete(testNews);
     }
@@ -189,14 +188,14 @@ public class MainControllerTest {
     @Test
     public void testShowSingleNews() {
         // Arrange
-        Integer newsId = 1;
+        int newsId = 1;
         when(newsService.get(newsId)).thenReturn(testNews);
 
         // Act
         String viewName = mainController.showSingleNews(modelMap, newsId);
 
         // Assert
-        assertEquals("showSingleNews", viewName);
+        assertEquals("news-single", viewName);
         assertEquals(testNews, modelMap.get("singleNews"));
         verify(newsService).get(newsId);
     }

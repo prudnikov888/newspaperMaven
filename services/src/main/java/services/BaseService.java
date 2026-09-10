@@ -1,8 +1,9 @@
 package services;
 
 import db.Dao;
-import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,7 +15,7 @@ import java.lang.reflect.ParameterizedType;
 @Service
 public class BaseService<T> implements IService<T> {
 
-    private static Logger log = Logger.getLogger(BaseService.class);
+    private static final Logger log = LoggerFactory.getLogger(BaseService.class);
 
     @Autowired
     private Dao<T> baseDao;
