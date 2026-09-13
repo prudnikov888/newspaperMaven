@@ -1,7 +1,6 @@
 package services;
 
 import db.PermissionsDao;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import pojos.Permissions;
@@ -10,6 +9,7 @@ import pojos.Permissions;
 @Service
 public class PermissionsService extends BaseService<Permissions> {
 
-    @Autowired
-    private PermissionsDao permissionsDao;
+    public PermissionsService(PermissionsDao permissionsDao) {
+        super(permissionsDao);
+    }
 }

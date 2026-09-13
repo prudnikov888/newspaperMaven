@@ -4,24 +4,17 @@ import db.Dao;
 import org.hibernate.HibernateException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 
 @Transactional
-@Service
 public class BaseService<T> implements IService<T> {
 
     private static final Logger log = LoggerFactory.getLogger(BaseService.class);
 
-    @Autowired
-    private Dao<T> baseDao;
-
-    public BaseService(){}
-
+    protected final Dao<T> baseDao;
 
     public BaseService(Dao<T> baseDao) {
         this.baseDao = baseDao;

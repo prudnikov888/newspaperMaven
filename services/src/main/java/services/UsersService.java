@@ -1,7 +1,6 @@
 package services;
 
 import db.UsersDao;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import pojos.Users;
@@ -10,8 +9,9 @@ import pojos.Users;
 @Service
 public class UsersService extends BaseService<Users> {
 
-    @Autowired
-    private UsersDao usersDao;
+    public UsersService(UsersDao usersDao) {
+        super(usersDao);
+    }
     /*
     public boolean checkUser(String email, String pass) {
         return usersDao.checkUser(email, pass);
