@@ -11,6 +11,9 @@ workspace.xml
 # Local secrets
 .env
 
+# Personal machine scripts
+claude-proxy.ps1
+
 # Package Files #
 *.jar
 *.war
