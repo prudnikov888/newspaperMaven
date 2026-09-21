@@ -80,7 +80,8 @@
             </td>
             <td>
                 <br/>
-                <a th:href="@{/news/{id}(id=${i.newsId})}" th:text="${i.title4ann}"></a>
+                <a th:href="@{/news/{id}(id=${i.newsId})}"
+                   th:text="${#strings.isEmpty(#strings.trim(i.title4ann)) ? i.title : i.title4ann}"></a>
                 <br/><br/>
             </td>
             <td sec:authorize="hasRole('admin')">

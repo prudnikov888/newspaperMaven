@@ -3,7 +3,7 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layout/default}">
 <head>
-    <title th:text="${singleNews.title4ann}">Новость</title>
+    <title th:text="${#strings.isEmpty(#strings.trim(singleNews.title4ann)) ? singleNews.title : singleNews.title4ann}">Новость</title>
 </head>
 <body>
 <div layout:fragment="content">
