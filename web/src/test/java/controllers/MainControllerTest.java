@@ -149,10 +149,11 @@ public class MainControllerTest {
         // Arrange
         News news = new News();
         news.setTitle("New Title");
+        news.setTitle4ann("New annotation");
         String categoryName = "Technology";
 
         // Act
-        String viewName = mainController.addWriteNews(news, categoryName);
+        String viewName = mainController.addWriteNews(modelMap, news, categoryName);
 
         // Assert
         assertEquals("redirect:/news", viewName);
@@ -162,21 +163,65 @@ public class MainControllerTest {
     }
 
     @Test
+    public void testAddWriteNews_BlankAnnotation_RejectedAndFormRedisplayed() {
+        for (String blank : new String[]{null, "", "   "}) {
+            // Arrange
+            News news = new News();
+            news.setTitle("New Title");
+            news.setTitle4ann(blank);
+            ModelMap model = new ModelMap();
+
+            // Act
+            String viewName = mainController.addWriteNews(model, news, "Technology");
+
+            // Assert
+            assertEquals("news-add", viewName);
+            assertNotNull(model.get("error"));
+            assertSame(news, model.get("news"));
+            assertEquals("Technology", news.getCategory().getCategoryName());
+        }
+        verify(newsService, never()).saveOrUpdate(any());
+    }
+
+    @Test
     public void testEditWriteNews() {
         // Arrange
         News news = new News();
         news.setNewsId(1);
         news.setTitle("Updated Title");
+        news.setTitle4ann("Updated annotation");
         String categoryName = "Science";
 
         // Act
-        String viewName = mainController.editWriteNews(news, categoryName);
+        String viewName = mainController.editWriteNews(modelMap, news, categoryName);
 
         // Assert
         assertEquals("redirect:/news", viewName);
         assertNotNull(news.getCategory());
         assertEquals(categoryName, news.getCategory().getCategoryName());
         verify(newsService).saveOrUpdate(news);
+    }
+
+    @Test
+    public void testEditWriteNews_BlankAnnotation_RejectedAndFormRedisplayed() {
+        for (String blank : new String[]{null, "", "   "}) {
+            // Arrange
+            News news = new News();
+            news.setNewsId(1);
+            news.setTitle("Updated Title");
+            news.setTitle4ann(blank);
+            ModelMap model = new ModelMap();
+
+            // Act
+            String viewName = mainController.editWriteNews(model, news, "Science");
+
+            // Assert
+            assertEquals("news-edit", viewName);
+            assertNotNull(model.get("error"));
+            assertSame(news, model.get("newsToEdit"));
+            assertEquals("Science", news.getCategory().getCategoryName());
+        }
+        verify(newsService, never()).saveOrUpdate(any());
     }
 
     @Test

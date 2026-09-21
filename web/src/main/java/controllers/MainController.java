@@ -20,6 +20,8 @@ import jakarta.annotation.security.RolesAllowed;
 @Controller
 public class MainController {
 
+    private static final String ANNOTATION_REQUIRED = "Аннотация к новости обязательна";
+
     @Autowired
     private NewsService newsService;
 
@@ -67,22 +69,36 @@ public class MainController {
 
     @RolesAllowed("admin")
     @RequestMapping(value = "/news/add", method = RequestMethod.POST)
-    public String addWriteNews (News news, @RequestParam(value="categoryName") String categoryName ) {
+    public String addWriteNews (ModelMap modelMap, News news, @RequestParam(value="categoryName") String categoryName ) {
         Category category = new Category();
         category.setCategoryName(categoryName);
         news.setCategory(category);
+        if (isBlank(news.getTitle4ann())) {
+            modelMap.addAttribute("news", news);
+            modelMap.addAttribute("error", ANNOTATION_REQUIRED);
+            return "news-add";
+        }
         newsService.saveOrUpdate(news);
         return "redirect:/news";
     }
 
     @RolesAllowed("admin")
     @RequestMapping(value = "/news/{id}/edit", method = RequestMethod.POST)
-    public String editWriteNews (News news, @RequestParam(value="categoryName") String categoryName ) {
+    public String editWriteNews (ModelMap modelMap, News news, @RequestParam(value="categoryName") String categoryName ) {
         Category category = new Category();
         category.setCategoryName(categoryName);
         news.setCategory(category);
+        if (isBlank(news.getTitle4ann())) {
+            modelMap.addAttribute("newsToEdit", news);
+            modelMap.addAttribute("error", ANNOTATION_REQUIRED);
+            return "news-edit";
+        }
         newsService.saveOrUpdate(news);
         return "redirect:/news";
+    }
+
+    private static boolean isBlank (String s) {
+        return s == null || s.isBlank();
     }
 
     @RolesAllowed("admin")
