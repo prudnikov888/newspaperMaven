@@ -1,8 +1,7 @@
 package db;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.query.Query;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.TypedQuery;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -24,13 +23,10 @@ public class UsersDaoTest {
             "FROM Users u WHERE u.email = :email AND u.pass = :pass";
 
     @Mock
-    private SessionFactory sessionFactory;
+    private EntityManager entityManager;
 
     @Mock
-    private Session session;
-
-    @Mock
-    private Query<Users> query;
+    private TypedQuery<Users> query;
 
     @InjectMocks
     private UsersDao usersDao;
@@ -45,12 +41,10 @@ public class UsersDaoTest {
         testUser.setPass("password123");
         testUser.setName("Test");
         testUser.setSurname("User");
-
-        when(sessionFactory.getCurrentSession()).thenReturn(session);
     }
 
     private void stubQuery(String email, String pass) {
-        when(session.createQuery(FIND_BY_EMAIL_AND_PASS_HQL, Users.class)).thenReturn(query);
+        when(entityManager.createQuery(FIND_BY_EMAIL_AND_PASS_HQL, Users.class)).thenReturn(query);
         when(query.setParameter("email", email)).thenReturn(query);
         when(query.setParameter("pass", pass)).thenReturn(query);
     }
@@ -61,39 +55,40 @@ public class UsersDaoTest {
         stubQuery("test@example.com", "password123");
         List<Users> usersList = new ArrayList<>();
         usersList.add(testUser);
-        when(query.list()).thenReturn(usersList);
+        when(query.getResultList()).thenReturn(usersList);
 
         // Act
         boolean result = usersDao.checkUser("test@example.com", "password123");
 
         // Assert
         assertTrue(result);
-        verify(sessionFactory).getCurrentSession();
-        verify(session).createQuery(FIND_BY_EMAIL_AND_PASS_HQL, Users.class);
+        verify(entityManager).createQuery(FIND_BY_EMAIL_AND_PASS_HQL, Users.class);
         verify(query).setParameter("email", "test@example.com");
         verify(query).setParameter("pass", "password123");
-        verify(query).list();
+        verify(query).getResultList();
     }
 
     @Test
     public void testCheckUser_InvalidCredentials_ReturnsFalse() {
         // Arrange
         stubQuery("wrong@example.com", "wrongpass");
-        when(query.list()).thenReturn(new ArrayList<>());
+        when(query.getResultList()).thenReturn(new ArrayList<>());
 
         // Act
         boolean result = usersDao.checkUser("wrong@example.com", "wrongpass");
 
         // Assert
         assertFalse(result);
-        verify(query).list();
+        verify(query).getResultList();
     }
 
     @Test
     public void testGetUser_ValidCredentials_ReturnsUser() {
         // Arrange
         stubQuery("test@example.com", "password123");
-        when(query.uniqueResult()).thenReturn(testUser);
+        List<Users> usersList = new ArrayList<>();
+        usersList.add(testUser);
+        when(query.getResultList()).thenReturn(usersList);
 
         // Act
         Users result = usersDao.getUser("test@example.com", "password123");
@@ -103,21 +98,21 @@ public class UsersDaoTest {
         assertEquals(testUser, result);
         assertEquals("test@example.com", result.getEmail());
         assertEquals("password123", result.getPass());
-        verify(query).uniqueResult();
+        verify(query).getResultList();
     }
 
     @Test
     public void testGetUser_InvalidCredentials_ReturnsNull() {
         // Arrange
         stubQuery("wrong@example.com", "wrongpass");
-        when(query.uniqueResult()).thenReturn(null);
+        when(query.getResultList()).thenReturn(new ArrayList<>());
 
         // Act
         Users result = usersDao.getUser("wrong@example.com", "wrongpass");
 
         // Assert
         assertNull(result);
-        verify(query).uniqueResult();
+        verify(query).getResultList();
     }
 
     @Test
@@ -126,7 +121,7 @@ public class UsersDaoTest {
         stubQuery("test@example.com", "password123");
         List<Users> usersList = new ArrayList<>();
         usersList.add(testUser);
-        when(query.list()).thenReturn(usersList);
+        when(query.getResultList()).thenReturn(usersList);
 
         // Act
         usersDao.checkUser("test@example.com", "password123");

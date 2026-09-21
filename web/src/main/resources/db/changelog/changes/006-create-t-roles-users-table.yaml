@@ -1,0 +1,46 @@
+databaseChangeLog:
+  - changeSet:
+      id: 006-create-t-roles-users-table
+      author: prudnikov888@gmail.com
+      changes:
+        - createTable:
+            tableName: t_roles_users
+            columns:
+              - column:
+                  name: role_id
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: INT
+                  constraints:
+                    nullable: false
+  - changeSet:
+      id: 006-t-roles-users-pk
+      author: prudnikov888@gmail.com
+      changes:
+        - addPrimaryKey:
+            tableName: t_roles_users
+            columnNames: role_id, user_id
+            constraintName: pk_t_roles_users
+  - changeSet:
+      id: 006-t-roles-users-fk-role
+      author: prudnikov888@gmail.com
+      changes:
+        - addForeignKeyConstraint:
+            baseTableName: t_roles_users
+            baseColumnNames: role_id
+            constraintName: fk_t_roles_users_role
+            referencedTableName: roles
+            referencedColumnNames: role_id
+  - changeSet:
+      id: 006-t-roles-users-fk-user
+      author: prudnikov888@gmail.com
+      changes:
+        - addForeignKeyConstraint:
+            baseTableName: t_roles_users
+            baseColumnNames: user_id
+            constraintName: fk_t_roles_users_user
+            referencedTableName: users
+            referencedColumnNames: user_id

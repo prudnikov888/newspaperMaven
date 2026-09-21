@@ -1,7 +1,6 @@
 package db;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
+import jakarta.persistence.EntityManager;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -17,10 +16,7 @@ import static org.mockito.Mockito.*;
 public class PermissionsDaoTest {
 
     @Mock
-    private SessionFactory sessionFactory;
-
-    @Mock
-    private Session session;
+    private EntityManager entityManager;
 
     @InjectMocks
     private PermissionsDao permissionsDao;
@@ -35,8 +31,6 @@ public class PermissionsDaoTest {
         testPermission.setDeleteNews(true);
         testPermission.setUpdateNews(true);
         testPermission.setReadNews(true);
-
-        when(sessionFactory.getCurrentSession()).thenReturn(session);
     }
 
     @Test
@@ -45,15 +39,14 @@ public class PermissionsDaoTest {
         permissionsDao.saveOrUpdate(testPermission);
 
         // Assert
-        verify(sessionFactory).getCurrentSession();
-        verify(session).merge(testPermission);
+        verify(entityManager).merge(testPermission);
     }
 
     @Test
     public void testGet() {
         // Arrange
         Integer permissionId = 1;
-        when(session.find(Permissions.class, permissionId)).thenReturn(testPermission);
+        when(entityManager.find(Permissions.class, permissionId)).thenReturn(testPermission);
 
         // Act
         Permissions result = permissionsDao.get(permissionId);
@@ -61,28 +54,27 @@ public class PermissionsDaoTest {
         // Assert
         assertNotNull(result);
         assertEquals(testPermission, result);
-        verify(session).find(Permissions.class, permissionId);
+        verify(entityManager).find(Permissions.class, permissionId);
     }
 
     @Test
     public void testGet_NotFound_ReturnsNull() {
         // Arrange
         Integer permissionId = 999;
-        when(session.find(Permissions.class, permissionId)).thenReturn(null);
+        when(entityManager.find(Permissions.class, permissionId)).thenReturn(null);
 
         // Act
         Permissions result = permissionsDao.get(permissionId);
 
         // Assert
         assertNull(result);
-        verify(session).find(Permissions.class, permissionId);
     }
 
     @Test
     public void testLoad() {
         // Arrange
         Integer permissionId = 1;
-        when(session.getReference(Permissions.class, permissionId)).thenReturn(testPermission);
+        when(entityManager.getReference(Permissions.class, permissionId)).thenReturn(testPermission);
 
         // Act
         Permissions result = permissionsDao.load(permissionId);
@@ -90,16 +82,18 @@ public class PermissionsDaoTest {
         // Assert
         assertNotNull(result);
         assertEquals(testPermission, result);
-        verify(session).getReference(Permissions.class, permissionId);
+        verify(entityManager).getReference(Permissions.class, permissionId);
     }
 
     @Test
     public void testDelete() {
+        // Arrange
+        when(entityManager.contains(testPermission)).thenReturn(true);
+
         // Act
         permissionsDao.delete(testPermission);
 
         // Assert
-        verify(sessionFactory).getCurrentSession();
-        verify(session).remove(testPermission);
+        verify(entityManager).remove(testPermission);
     }
 }

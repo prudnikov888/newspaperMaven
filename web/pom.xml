@@ -39,6 +39,12 @@
           <artifactId>spring-boot-starter-security</artifactId>
       </dependency>
       <dependency>
+          <!-- Boot 4 moved Liquibase autoconfiguration into its own module, pulled in only via
+               this starter (plain liquibase-core alone does not activate it) -->
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-liquibase</artifactId>
+      </dependency>
+      <dependency>
           <!-- Not managed by the Spring Boot BOM; VERIFY latest version on Maven Central -->
           <groupId>nz.net.ultraq.thymeleaf</groupId>
           <artifactId>thymeleaf-layout-dialect</artifactId>

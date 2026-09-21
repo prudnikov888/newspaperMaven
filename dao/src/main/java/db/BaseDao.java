@@ -1,11 +1,9 @@
 package db;
 
-import org.hibernate.HibernateException;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.io.Serializable;
@@ -20,27 +18,19 @@ public class BaseDao<T> implements Dao<T>{
 
     private static final Logger log = LoggerFactory.getLogger(BaseDao.class);
 
-    private SessionFactory sessionFactory;
+    // Field injection is required here: @PersistenceContext is handled by
+    // PersistenceAnnotationBeanPostProcessor and, unlike EntityManagerFactory,
+    // EntityManager cannot be resolved through ordinary constructor autowiring.
+    @PersistenceContext
+    protected EntityManager entityManager;
 
-    public BaseDao(){
-    }
-
-    @Autowired
-    public BaseDao (SessionFactory sessionFactory) {
-       this.sessionFactory = sessionFactory;
-    }
-
-    public Session currentSession(){
-        return sessionFactory.getCurrentSession();
-    }
     @Override
     public void saveOrUpdate(T t){
         try {
-            Session session = currentSession();
-            session.merge(t);
+            entityManager.merge(t);
             log.info("saveOrUpdate(t):" + t);
             log.info("Save or update (commit):" + t);
-         } catch (HibernateException e) {
+         } catch (RuntimeException e) {
             log.error("Error save or update" + getPersistentClass() + "in Dao" + e);
         }
 
@@ -50,10 +40,9 @@ public class BaseDao<T> implements Dao<T>{
         log.info("Get class by id:" + id);
         T t = null;
         try {
-            Session session = currentSession();
-            t = (T) session.find(getPersistentClass(), id);
+            t = (T) entityManager.find(getPersistentClass(), id);
             log.info("get clazz:" + t);
-        } catch (HibernateException e) {
+        } catch (RuntimeException e) {
             log.error("Error get " + getPersistentClass() + " in Dao" + e);
         }
         return t;
@@ -63,11 +52,9 @@ public class BaseDao<T> implements Dao<T>{
         log.info("Load class by id:" + id);
         T t = null;
         try {
-            Session session = currentSession();
-            t = (T) session.getReference(getPersistentClass(), id);
+            t = (T) entityManager.getReference(getPersistentClass(), id);
             log.info("load() clazz:" + t);
-            session.isDirty();
-        } catch (HibernateException e) {
+        } catch (RuntimeException e) {
             log.error("Error load() " + getPersistentClass() + " in Dao" + e);
         }
         return t;
@@ -75,10 +62,9 @@ public class BaseDao<T> implements Dao<T>{
    @Override
     public void delete(T t) {
         try {
-            Session session = currentSession();
-            session.remove(t);
+            entityManager.remove(entityManager.contains(t) ? t : entityManager.merge(t));
             log.info("Delete:" + t);
-         } catch (HibernateException e) {
+         } catch (RuntimeException e) {
             log.error("Error save or update" + getPersistentClass() + "in Dao" + e);
          }
     }

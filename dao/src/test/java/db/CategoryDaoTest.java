@@ -1,7 +1,6 @@
 package db;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
+import jakarta.persistence.EntityManager;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -17,10 +16,7 @@ import static org.mockito.Mockito.*;
 public class CategoryDaoTest {
 
     @Mock
-    private SessionFactory sessionFactory;
-
-    @Mock
-    private Session session;
+    private EntityManager entityManager;
 
     @InjectMocks
     private CategoryDao categoryDao;
@@ -32,8 +28,6 @@ public class CategoryDaoTest {
         testCategory = new Category();
         testCategory.setCategoryId(1);
         testCategory.setCategoryName("Technology");
-
-        when(sessionFactory.getCurrentSession()).thenReturn(session);
     }
 
     @Test
@@ -42,15 +36,14 @@ public class CategoryDaoTest {
         categoryDao.saveOrUpdate(testCategory);
 
         // Assert
-        verify(sessionFactory).getCurrentSession();
-        verify(session).merge(testCategory);
+        verify(entityManager).merge(testCategory);
     }
 
     @Test
     public void testGet() {
         // Arrange
         Integer categoryId = 1;
-        when(session.find(Category.class, categoryId)).thenReturn(testCategory);
+        when(entityManager.find(Category.class, categoryId)).thenReturn(testCategory);
 
         // Act
         Category result = categoryDao.get(categoryId);
@@ -58,28 +51,27 @@ public class CategoryDaoTest {
         // Assert
         assertNotNull(result);
         assertEquals(testCategory, result);
-        verify(session).find(Category.class, categoryId);
+        verify(entityManager).find(Category.class, categoryId);
     }
 
     @Test
     public void testGet_NotFound_ReturnsNull() {
         // Arrange
         Integer categoryId = 999;
-        when(session.find(Category.class, categoryId)).thenReturn(null);
+        when(entityManager.find(Category.class, categoryId)).thenReturn(null);
 
         // Act
         Category result = categoryDao.get(categoryId);
 
         // Assert
         assertNull(result);
-        verify(session).find(Category.class, categoryId);
     }
 
     @Test
     public void testLoad() {
         // Arrange
         Integer categoryId = 1;
-        when(session.getReference(Category.class, categoryId)).thenReturn(testCategory);
+        when(entityManager.getReference(Category.class, categoryId)).thenReturn(testCategory);
 
         // Act
         Category result = categoryDao.load(categoryId);
@@ -87,16 +79,18 @@ public class CategoryDaoTest {
         // Assert
         assertNotNull(result);
         assertEquals(testCategory, result);
-        verify(session).getReference(Category.class, categoryId);
+        verify(entityManager).getReference(Category.class, categoryId);
     }
 
     @Test
     public void testDelete() {
+        // Arrange
+        when(entityManager.contains(testCategory)).thenReturn(true);
+
         // Act
         categoryDao.delete(testCategory);
 
         // Assert
-        verify(sessionFactory).getCurrentSession();
-        verify(session).remove(testCategory);
+        verify(entityManager).remove(testCategory);
     }
 }

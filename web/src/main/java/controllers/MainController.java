@@ -29,7 +29,7 @@ public class MainController {
         int numberOfPages = (int) Math.ceil(((double) a) / newsOnPage);
         if (selectedPage < 1)
             selectedPage = 1;
-        else if (selectedPage > numberOfPages)
+        else if (numberOfPages > 0 && selectedPage > numberOfPages)
             selectedPage = numberOfPages;
         modelMap.addAttribute("newsList", newsService.getNewsList(selectedPage, newsOnPage, sortBy));
         modelMap.addAttribute("numberOfPages", numberOfPages);

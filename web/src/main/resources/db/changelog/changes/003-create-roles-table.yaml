@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: 003-create-roles-table
+      author: prudnikov888@gmail.com
+      changes:
+        - createTable:
+            tableName: roles
+            columns:
+              - column:
+                  name: role_id
+                  type: INT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: role_type
+                  type: VARCHAR(255)

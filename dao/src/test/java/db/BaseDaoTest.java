@@ -1,11 +1,10 @@
 package db;
 
-import org.hibernate.HibernateException;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
+import jakarta.persistence.EntityManager;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import pojos.Category;
@@ -20,23 +19,18 @@ import static org.mockito.Mockito.*;
 public class BaseDaoTest {
 
     @Mock
-    private SessionFactory sessionFactory;
+    private EntityManager entityManager;
 
-    @Mock
-    private Session session;
-
+    @InjectMocks
     private CategoryDao categoryDao;
 
     private Category testCategory;
 
     @BeforeEach
     public void setUp() {
-        categoryDao = new CategoryDao(sessionFactory);
         testCategory = new Category();
         testCategory.setCategoryId(1);
         testCategory.setCategoryName("Test Category");
-
-        when(sessionFactory.getCurrentSession()).thenReturn(session);
     }
 
     @Test
@@ -45,27 +39,26 @@ public class BaseDaoTest {
         categoryDao.saveOrUpdate(testCategory);
 
         // Assert
-        verify(sessionFactory).getCurrentSession();
-        verify(session).merge(testCategory);
+        verify(entityManager).merge(testCategory);
     }
 
     @Test
     public void testSaveOrUpdate_WithException() {
         // Arrange
-        doThrow(new HibernateException("Test exception")).when(session).merge(testCategory);
+        doThrow(new RuntimeException("Test exception")).when(entityManager).merge(testCategory);
 
         // Act
         categoryDao.saveOrUpdate(testCategory);
 
         // Assert - метод должен обработать исключение без проброса
-        verify(session).merge(testCategory);
+        verify(entityManager).merge(testCategory);
     }
 
     @Test
     public void testGet() {
         // Arrange
         Integer id = 1;
-        when(session.find(Category.class, id)).thenReturn(testCategory);
+        when(entityManager.find(Category.class, id)).thenReturn(testCategory);
 
         // Act
         Category result = categoryDao.get(id);
@@ -73,43 +66,41 @@ public class BaseDaoTest {
         // Assert
         assertNotNull(result);
         assertEquals(testCategory, result);
-        verify(sessionFactory).getCurrentSession();
-        verify(session).find(Category.class, id);
+        verify(entityManager).find(Category.class, id);
     }
 
     @Test
     public void testGet_NotFound_ReturnsNull() {
         // Arrange
         Integer id = 999;
-        when(session.find(Category.class, id)).thenReturn(null);
+        when(entityManager.find(Category.class, id)).thenReturn(null);
 
         // Act
         Category result = categoryDao.get(id);
 
         // Assert
         assertNull(result);
-        verify(session).find(Category.class, id);
     }
 
     @Test
     public void testGet_WithException() {
         // Arrange
         Integer id = 1;
-        when(session.find(Category.class, id)).thenThrow(new HibernateException("Test exception"));
+        when(entityManager.find(Category.class, id)).thenThrow(new RuntimeException("Test exception"));
 
         // Act
         Category result = categoryDao.get(id);
 
         // Assert - метод должен обработать исключение и вернуть null
         assertNull(result);
-        verify(session).find(Category.class, id);
+        verify(entityManager).find(Category.class, id);
     }
 
     @Test
     public void testLoad() {
         // Arrange
         Integer id = 1;
-        when(session.getReference(Category.class, id)).thenReturn(testCategory);
+        when(entityManager.getReference(Category.class, id)).thenReturn(testCategory);
 
         // Act
         Category result = categoryDao.load(id);
@@ -117,55 +108,60 @@ public class BaseDaoTest {
         // Assert
         assertNotNull(result);
         assertEquals(testCategory, result);
-        verify(sessionFactory).getCurrentSession();
-        verify(session).getReference(Category.class, id);
-        verify(session).isDirty();
+        verify(entityManager).getReference(Category.class, id);
     }
 
     @Test
     public void testLoad_WithException() {
         // Arrange
         Integer id = 1;
-        when(session.getReference(Category.class, id)).thenThrow(new HibernateException("Test exception"));
+        when(entityManager.getReference(Category.class, id)).thenThrow(new RuntimeException("Test exception"));
 
         // Act
         Category result = categoryDao.load(id);
 
         // Assert - метод должен обработать исключение и вернуть null
         assertNull(result);
-        verify(session).getReference(Category.class, id);
+        verify(entityManager).getReference(Category.class, id);
     }
 
     @Test
     public void testDelete() {
+        // Arrange
+        when(entityManager.contains(testCategory)).thenReturn(true);
+
         // Act
         categoryDao.delete(testCategory);
 
         // Assert
-        verify(sessionFactory).getCurrentSession();
-        verify(session).remove(testCategory);
+        verify(entityManager).remove(testCategory);
+    }
+
+    @Test
+    public void testDelete_Detached_MergesBeforeRemove() {
+        // Arrange
+        Category managed = new Category();
+        when(entityManager.contains(testCategory)).thenReturn(false);
+        when(entityManager.merge(testCategory)).thenReturn(managed);
+
+        // Act
+        categoryDao.delete(testCategory);
+
+        // Assert
+        verify(entityManager).merge(testCategory);
+        verify(entityManager).remove(managed);
     }
 
     @Test
     public void testDelete_WithException() {
         // Arrange
-        doThrow(new HibernateException("Test exception")).when(session).remove(testCategory);
+        when(entityManager.contains(testCategory)).thenReturn(true);
+        doThrow(new RuntimeException("Test exception")).when(entityManager).remove(testCategory);
 
         // Act
         categoryDao.delete(testCategory);
 
         // Assert - метод должен обработать исключение без проброса
-        verify(session).remove(testCategory);
-    }
-
-    @Test
-    public void testCurrentSession() {
-        // Act
-        Session result = categoryDao.currentSession();
-
-        // Assert
-        assertNotNull(result);
-        assertEquals(session, result);
-        verify(sessionFactory).getCurrentSession();
+        verify(entityManager).remove(testCategory);
     }
 }

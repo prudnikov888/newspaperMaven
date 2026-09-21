@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changes/001-create-category-table.yaml
+  - include:
+      file: db/changelog/changes/002-create-users-table.yaml
+  - include:
+      file: db/changelog/changes/003-create-roles-table.yaml
+  - include:
+      file: db/changelog/changes/004-create-news-table.yaml
+  - include:
+      file: db/changelog/changes/005-create-permissions-table.yaml
+  - include:
+      file: db/changelog/changes/006-create-t-roles-users-table.yaml

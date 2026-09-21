@@ -1,7 +1,6 @@
 package db;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
+import jakarta.persistence.EntityManager;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -17,10 +16,7 @@ import static org.mockito.Mockito.*;
 public class RolesDaoTest {
 
     @Mock
-    private SessionFactory sessionFactory;
-
-    @Mock
-    private Session session;
+    private EntityManager entityManager;
 
     @InjectMocks
     private RolesDao rolesDao;
@@ -32,8 +28,6 @@ public class RolesDaoTest {
         testRole = new Roles();
         testRole.setRoleId(1);
         testRole.setRoleType("admin");
-
-        when(sessionFactory.getCurrentSession()).thenReturn(session);
     }
 
     @Test
@@ -42,15 +36,14 @@ public class RolesDaoTest {
         rolesDao.saveOrUpdate(testRole);
 
         // Assert
-        verify(sessionFactory).getCurrentSession();
-        verify(session).merge(testRole);
+        verify(entityManager).merge(testRole);
     }
 
     @Test
     public void testGet() {
         // Arrange
         Integer roleId = 1;
-        when(session.find(Roles.class, roleId)).thenReturn(testRole);
+        when(entityManager.find(Roles.class, roleId)).thenReturn(testRole);
 
         // Act
         Roles result = rolesDao.get(roleId);
@@ -58,28 +51,27 @@ public class RolesDaoTest {
         // Assert
         assertNotNull(result);
         assertEquals(testRole, result);
-        verify(session).find(Roles.class, roleId);
+        verify(entityManager).find(Roles.class, roleId);
     }
 
     @Test
     public void testGet_NotFound_ReturnsNull() {
         // Arrange
         Integer roleId = 999;
-        when(session.find(Roles.class, roleId)).thenReturn(null);
+        when(entityManager.find(Roles.class, roleId)).thenReturn(null);
 
         // Act
         Roles result = rolesDao.get(roleId);
 
         // Assert
         assertNull(result);
-        verify(session).find(Roles.class, roleId);
     }
 
     @Test
     public void testLoad() {
         // Arrange
         Integer roleId = 1;
-        when(session.getReference(Roles.class, roleId)).thenReturn(testRole);
+        when(entityManager.getReference(Roles.class, roleId)).thenReturn(testRole);
 
         // Act
         Roles result = rolesDao.load(roleId);
@@ -87,16 +79,18 @@ public class RolesDaoTest {
         // Assert
         assertNotNull(result);
         assertEquals(testRole, result);
-        verify(session).getReference(Roles.class, roleId);
+        verify(entityManager).getReference(Roles.class, roleId);
     }
 
     @Test
     public void testDelete() {
+        // Arrange
+        when(entityManager.contains(testRole)).thenReturn(true);
+
         // Act
         rolesDao.delete(testRole);
 
         // Assert
-        verify(sessionFactory).getCurrentSession();
-        verify(session).remove(testRole);
+        verify(entityManager).remove(testRole);
     }
 }

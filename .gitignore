@@ -8,6 +8,9 @@
 target
 workspace.xml
 
+# Local secrets
+.env
+
 # Package Files #
 *.jar
 *.war

@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-create-category-table
+      author: prudnikov888@gmail.com
+      changes:
+        - createTable:
+            tableName: category
+            columns:
+              - column:
+                  name: category_id
+                  type: INT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: category_name
+                  type: VARCHAR(255)

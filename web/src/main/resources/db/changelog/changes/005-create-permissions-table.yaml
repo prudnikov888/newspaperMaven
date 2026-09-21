@@ -1,0 +1,44 @@
+databaseChangeLog:
+  - changeSet:
+      id: 005-create-permissions-table
+      author: prudnikov888@gmail.com
+      changes:
+        - createTable:
+            tableName: permissions
+            columns:
+              - column:
+                  name: role
+                  type: INT
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: add_news
+                  type: BIT(1)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: delete_news
+                  type: BIT(1)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: update_news
+                  type: BIT(1)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: read_news
+                  type: BIT(1)
+                  constraints:
+                    nullable: false
+  - changeSet:
+      id: 005-permissions-fk-role
+      author: prudnikov888@gmail.com
+      changes:
+        - addForeignKeyConstraint:
+            baseTableName: permissions
+            baseColumnNames: role
+            constraintName: fk_permissions_role
+            referencedTableName: roles
+            referencedColumnNames: role_id

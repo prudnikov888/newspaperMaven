@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: 002-create-users-table
+      author: prudnikov888@gmail.com
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: user_id
+                  type: INT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  name: surname
+                  type: VARCHAR(255)
+              - column:
+                  name: email
+                  type: VARCHAR(255)
+              - column:
+                  name: pass
+                  type: VARCHAR(255)
