@@ -1,6 +1,7 @@
 package db;
 
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.TypedQuery;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -8,6 +9,9 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import pojos.Roles;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
@@ -17,6 +21,9 @@ public class RolesDaoTest {
 
     @Mock
     private EntityManager entityManager;
+
+    @Mock
+    private TypedQuery<Roles> query;
 
     @InjectMocks
     private RolesDao rolesDao;
@@ -92,5 +99,36 @@ public class RolesDaoTest {
 
         // Assert
         verify(entityManager).remove(testRole);
+    }
+
+    @Test
+    public void testFindByType_Found() {
+        // Arrange
+        when(entityManager.createQuery("FROM Roles r WHERE r.roleType = :roleType", Roles.class)).thenReturn(query);
+        when(query.setParameter("roleType", "admin")).thenReturn(query);
+        List<Roles> results = new ArrayList<>();
+        results.add(testRole);
+        when(query.getResultList()).thenReturn(results);
+
+        // Act
+        Roles result = rolesDao.findByType("admin");
+
+        // Assert
+        assertNotNull(result);
+        assertEquals(testRole, result);
+    }
+
+    @Test
+    public void testFindByType_NotFound_ReturnsNull() {
+        // Arrange
+        when(entityManager.createQuery("FROM Roles r WHERE r.roleType = :roleType", Roles.class)).thenReturn(query);
+        when(query.setParameter("roleType", "missing")).thenReturn(query);
+        when(query.getResultList()).thenReturn(new ArrayList<>());
+
+        // Act
+        Roles result = rolesDao.findByType("missing");
+
+        // Assert
+        assertNull(result);
     }
 }

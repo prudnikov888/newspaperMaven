@@ -91,4 +91,30 @@ public class RolesServiceTest {
         assertEquals(testRole, result);
         verify(rolesDao).load(roleId);
     }
+
+    @Test
+    public void testFindByType() {
+        // Arrange
+        when(rolesDao.findByType("admin")).thenReturn(testRole);
+
+        // Act
+        Roles result = rolesService.findByType("admin");
+
+        // Assert
+        assertNotNull(result);
+        assertEquals(testRole, result);
+        verify(rolesDao).findByType("admin");
+    }
+
+    @Test
+    public void testFindByType_NotFound_ReturnsNull() {
+        // Arrange
+        when(rolesDao.findByType("missing")).thenReturn(null);
+
+        // Act
+        Roles result = rolesService.findByType("missing");
+
+        // Assert
+        assertNull(result);
+    }
 }

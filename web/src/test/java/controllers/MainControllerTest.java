@@ -6,9 +6,12 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.ui.ModelMap;
 import pojos.News;
+import pojos.Users;
 import services.NewsService;
+import services.UsersService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +24,12 @@ public class MainControllerTest {
 
     @Mock
     private NewsService newsService;
+
+    @Mock
+    private UsersService usersService;
+
+    @Mock
+    private PasswordEncoder passwordEncoder;
 
     @InjectMocks
     private MainController mainController;
@@ -216,5 +225,46 @@ public class MainControllerTest {
 
         // Assert
         assertEquals("logInPage", viewName);
+    }
+
+    @Test
+    public void testRegisterPage() {
+        // Act
+        String viewName = mainController.registerPage();
+
+        // Assert
+        assertEquals("register", viewName);
+    }
+
+    @Test
+    public void testRegisterSubmit_Success() {
+        // Arrange
+        when(passwordEncoder.encode("secret")).thenReturn("hashed-secret");
+        when(usersService.registerUser(any(), eq("user"))).thenAnswer(invocation -> invocation.getArgument(0));
+
+        // Act
+        String viewName = mainController.registerSubmit(modelMap, "Test", "User", "test@example.com", "secret");
+
+        // Assert
+        assertEquals("redirect:/login", viewName);
+        verify(usersService).registerUser(argThat(u ->
+                u.getName().equals("Test")
+                        && u.getSurname().equals("User")
+                        && u.getEmail().equals("test@example.com")
+                        && u.getPass().equals("hashed-secret")), eq("user"));
+    }
+
+    @Test
+    public void testRegisterSubmit_EmailTaken_ReturnsRegisterPageWithError() {
+        // Arrange
+        when(passwordEncoder.encode("secret")).thenReturn("hashed-secret");
+        when(usersService.registerUser(any(), eq("user"))).thenReturn(null);
+
+        // Act
+        String viewName = mainController.registerSubmit(modelMap, "Test", "User", "taken@example.com", "secret");
+
+        // Assert
+        assertEquals("register", viewName);
+        assertNotNull(modelMap.get("error"));
     }
 }

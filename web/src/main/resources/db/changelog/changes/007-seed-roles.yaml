@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: 007-seed-roles
+      author: prudnikov888@gmail.com
+      changes:
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: role_id
+                  valueNumeric: 1
+              - column:
+                  name: role_type
+                  value: admin
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: role_id
+                  valueNumeric: 2
+              - column:
+                  name: role_type
+                  value: user

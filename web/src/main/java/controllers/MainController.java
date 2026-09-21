@@ -1,6 +1,7 @@
 package controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -9,7 +10,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import pojos.Category;
 import pojos.News;
+import pojos.Users;
 import services.NewsService;
+import services.UsersService;
 
 import jakarta.annotation.security.RolesAllowed;
 
@@ -19,6 +22,12 @@ public class MainController {
 
     @Autowired
     private NewsService newsService;
+
+    @Autowired
+    private UsersService usersService;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @RequestMapping(value = "/news", method = RequestMethod.GET)
     public String showNews (ModelMap modelMap,
@@ -99,6 +108,28 @@ public class MainController {
         return "logInPage";
     }
 
+    @RequestMapping(value = "/register", method = RequestMethod.GET)
+    public String registerPage () {
+        return "register";
+    }
 
+    @RequestMapping(value = "/register", method = RequestMethod.POST)
+    public String registerSubmit (ModelMap modelMap,
+                                   @RequestParam String name,
+                                   @RequestParam String surname,
+                                   @RequestParam String email,
+                                   @RequestParam String password) {
+        Users user = new Users();
+        user.setName(name);
+        user.setSurname(surname);
+        user.setEmail(email);
+        user.setPass(passwordEncoder.encode(password));
+        Users created = usersService.registerUser(user, "user");
+        if (created == null) {
+            modelMap.addAttribute("error", "Пользователь с таким email уже зарегистрирован");
+            return "register";
+        }
+        return "redirect:/login";
+    }
 
 }

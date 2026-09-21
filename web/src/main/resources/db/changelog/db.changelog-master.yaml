@@ -11,3 +11,7 @@ databaseChangeLog:
       file: db/changelog/changes/005-create-permissions-table.yaml
   - include:
       file: db/changelog/changes/006-create-t-roles-users-table.yaml
+  - include:
+      file: db/changelog/changes/007-seed-roles.yaml
+  - include:
+      file: db/changelog/changes/008-users-email-unique.yaml

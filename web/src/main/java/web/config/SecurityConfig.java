@@ -1,6 +1,5 @@
 package web.config;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
@@ -8,10 +7,13 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
+import pojos.Roles;
+import pojos.Users;
+import services.UsersService;
 
 /**
  * Replaces the legacy WEB-INF/spring-security.xml.
@@ -22,6 +24,13 @@ import org.springframework.security.web.SecurityFilterChain;
  * {@code <global-method-security jsr250-annotations="enabled"/>}. This config faithfully
  * reproduces that shape: HTTP-level access is wide open, and {@link EnableMethodSecurity}
  * with {@code jsr250Enabled = true} is what actually protects the admin-only endpoints.
+ *
+ * <p>Authentication is backed by the {@code users} table (via {@link UsersService}), not
+ * an in-memory user: {@code loadUserByUsername} looks a user up by email, and its granted
+ * roles come from {@code Users.roles} (the {@code roles}/{@code t_roles_users} tables).
+ * The very first admin account is bootstrapped into that same table on startup by
+ * {@link AdminUserInitializer}, from the {@code ADMIN_USERNAME}/{@code ADMIN_PASSWORD_HASH}
+ * env vars — see its javadoc.
  */
 @Configuration
 @EnableWebSecurity
@@ -48,22 +57,20 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
-    /**
-     * Faithful replacement for the single hardcoded in-memory admin user that used to live
-     * in spring-security.xml. Unlike the old XML, the credentials are NOT baked into source:
-     * both the username and the BCrypt password hash must be supplied via environment
-     * variables. Generate a hash locally with
-     * {@code new BCryptPasswordEncoder().encode("your-password")} and set it out of band
-     * (local env var / secrets manager) - never commit it.
-     */
     @Bean
-    public UserDetailsService userDetailsService(
-            @Value("${app.security.admin.username}") String adminUsername,
-            @Value("${app.security.admin.password-hash}") String adminPasswordHash) {
-        return new InMemoryUserDetailsManager(
-                User.withUsername(adminUsername)
-                        .password(adminPasswordHash)
-                        .roles("admin")
-                        .build());
+    public UserDetailsService userDetailsService(UsersService usersService) {
+        return email -> {
+            Users user = usersService.findByEmail(email);
+            if (user == null) {
+                throw new UsernameNotFoundException("No user with email " + email);
+            }
+            String[] roleNames = (user.getRoles() == null || user.getRoles().isEmpty())
+                    ? new String[]{"user"}
+                    : user.getRoles().stream().map(Roles::getRoleType).toArray(String[]::new);
+            return User.withUsername(user.getEmail())
+                    .password(user.getPass())
+                    .roles(roleNames)
+                    .build();
+        };
     }
 }

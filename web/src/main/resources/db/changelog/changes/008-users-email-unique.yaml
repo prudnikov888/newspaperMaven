@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - changeSet:
+      id: 008-users-email-unique
+      author: prudnikov888@gmail.com
+      changes:
+        - addUniqueConstraint:
+            tableName: users
+            columnNames: email
+            constraintName: uq_users_email

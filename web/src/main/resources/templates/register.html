@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/default}">
+<head>
+    <title>Регистрация</title>
+</head>
+<body>
+<div layout:fragment="header"></div>
+<div layout:fragment="content">
+    <small>Создайте аккаунт, указав email и пароль</small>
+    <br/><br/>
+
+    <p th:if="${error}" style="color:red" th:text="${error}"></p>
+
+    <form th:action="@{/register}" method="post">
+        <table>
+            <tr>
+                <td>Имя:</td>
+                <td><input type="text" name="name" placeholder="Ваше имя" size="40" required="required"/></td>
+            </tr>
+            <tr>
+                <td>Фамилия:</td>
+                <td><input type="text" name="surname" placeholder="Ваша фамилия" size="40" required="required"/></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" name="email" placeholder="Введите ваш email" size="40" required="required"/></td>
+            </tr>
+            <tr>
+                <td>Пароль:</td>
+                <td><input type="password" name="password" placeholder="Введите пароль" size="40" required="required"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td align="right"><input type="submit" value="Зарегистрироваться" size="30"/></td>
+            </tr>
+        </table>
+    </form>
+    <br/>
+    <a th:href="@{/login}">Уже есть аккаунт? Войти</a>
+</div>
+</body>
+</html>

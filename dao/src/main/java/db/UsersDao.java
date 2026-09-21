@@ -8,33 +8,26 @@ import java.util.List;
 @Repository
 public class UsersDao extends BaseDao<Users> {
 
-    private static final String FIND_BY_EMAIL_AND_PASS_HQL =
-            "FROM Users u WHERE u.email = :email AND u.pass = :pass";
+    private static final String FIND_BY_EMAIL_HQL =
+            "SELECT DISTINCT u FROM Users u LEFT JOIN FETCH u.roles WHERE u.email = :email";
 
     /**
-     * @param email - User's email, provided for logging in
-     * @param pass  - User's pass, provided for logging in
-     * @return true, if User's email and pass are valid for logging in;
-     * otherwise returns false;
+     * @param email - user's email, used as the login identifier
+     * @return the user (with roles eagerly fetched, needed for authentication/authorization),
+     * or null if no user with this email exists
      */
-    public boolean checkUser(String email, String pass) {
-        TypedQuery<Users> query = entityManager.createQuery(FIND_BY_EMAIL_AND_PASS_HQL, Users.class);
+    public Users findByEmail(String email) {
+        TypedQuery<Users> query = entityManager.createQuery(FIND_BY_EMAIL_HQL, Users.class);
         query.setParameter("email", email);
-        query.setParameter("pass", pass);
         List<Users> results = query.getResultList();
-        return !results.isEmpty();
+        return results.isEmpty() ? null : results.get(0);
     }
 
     /**
-     * @param email - User's email, provided for logging in
-     * @param pass  - User's pass, provided for logging in
-     * @return Users entity
+     * Persists a brand-new user and populates its generated id, unlike
+     * {@link #saveOrUpdate(Users)} (merge) whose result isn't captured.
      */
-    public Users getUser(String email, String pass) {
-        TypedQuery<Users> query = entityManager.createQuery(FIND_BY_EMAIL_AND_PASS_HQL, Users.class);
-        query.setParameter("email", email);
-        query.setParameter("pass", pass);
-        List<Users> results = query.getResultList();
-        return results.isEmpty() ? null : results.get(0);
+    public void create(Users user) {
+        entityManager.persist(user);
     }
 }

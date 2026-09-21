@@ -14,6 +14,15 @@
                 <button type="submit">Выйти из системы</button>
             </form>
         </span>
+        <span sec:authorize="isAuthenticated() and !hasRole('admin')">
+            Добрый день, вы зашли как <span sec:authentication="name"></span>!
+            <form th:action="@{/logout}" method="post" style="display:inline">
+                <button type="submit">Выйти из системы</button>
+            </form>
+        </span>
+        <span sec:authorize="isAnonymous()">
+            <a th:href="@{/login}">Войти</a> / <a th:href="@{/register}">Регистрация</a>
+        </span>
     </div>
 </div>
 </body>

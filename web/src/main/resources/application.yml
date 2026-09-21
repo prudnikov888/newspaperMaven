@@ -19,11 +19,12 @@ spring:
 app:
   security:
     admin:
-      # No defaults on purpose: both must be supplied via environment variables.
-      # Generate the hash locally with `new BCryptPasswordEncoder().encode("your-password")`
-      # and never commit it.
-      username: ${ADMIN_USERNAME}
-      password-hash: ${ADMIN_PASSWORD_HASH}
+      # Only used once, on startup, to bootstrap the first admin row into the `users`
+      # table (see AdminUserInitializer) - optional now that login is DB-backed via
+      # UsersService, not in-memory. Generate the hash locally with
+      # `new BCryptPasswordEncoder().encode("your-password")` and never commit it.
+      username: ${ADMIN_USERNAME:}
+      password-hash: ${ADMIN_PASSWORD_HASH:}
 
 logging:
   level:
